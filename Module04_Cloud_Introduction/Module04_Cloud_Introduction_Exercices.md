@@ -15,20 +15,18 @@
   - Sur votre cahier de laboratoire, notez le nom de votre abonnement
 - Si vous n'avez pas de compte Azure, vous pouvez en créer un gratuitement (si crédit non utilisé) :
   - https://azure.microsoft.com/fr-ca/free/students/
+- Pour accéder au menu étudiant à partir du portail, simplement se rendre sur le service Azure "Education".
 
 ### Tâche 2 - Installation du Azure CLI
 
-- Installez le Azure CLI sur votre machine
+- Installez le Azure CLI sur votre machine. **Pour ceux qui utilisent l'application *Windows Terminal*, veillez prendre note que la tâche *Azure Cloud Shell* est actuellement non opérationnelle. Cependant une fois Azure CLI installé, il sera possible d'utiliser les commandes Azure dans *CMD* ou dans *PowerShell*.**
   - https://docs.microsoft.com/fr-ca/cli/azure/install-azure-cli
 - Testez l'installation
   - Ouvrez un terminal
   - Exécutez la commande `az login`
   - Connectez-vous avec votre compte Azure
-  - Exécutez la commande `az account list`
-  - Notez le nom de votre abonnement
-  - Exécutez la commande `az account set --subscription "Nom de votre abonnement"`
-  - Exécutez la commande `az account show`
-  - Notez le nom de votre abonnement sur votre cahier de laboratoire et valider que c'est le même que celui de la tâche précédente
+  - La commande `az account list` s'exécute automatiquement. Sur "Azure Cloud Shell", la commande est `az account show`.
+  - Notez le nom de votre abonnement sur votre cahier de laboratoire.
 
 ## Exercice 2 - Découverte du portail Azure
 
@@ -37,39 +35,43 @@
 - Créez une ressource Azure
   - Ouvrez le portail Azure
   - Cliquez sur `Créer une ressource` (en haut à gauche)
-  - Sélectionnez `Storage account` (Compte de stockage)
-  - Choisissez votre abonnement, un groupe de ressources et le nom "M04-Exercice2-T01" pour votre compte de stockage
+  - Allez dans la catégorie `Stockage` sélectionnez `Storage account` (Compte de stockage)
+  - Choisissez votre abonnement, créez un groupe de ressources "M04-Exercice2-T01" et nommez votre compte de stockage avec votre matricule, exemple `1234567stockage` (peu d'importance).
   - Au niveau de la région, choisissez `Canada east`
-  - Pour la redondance de stockage, choisissez `Stockage localement redondant` (LRS)
-  - Ajoutez les tags suivants :
+  - Pour la redondance de stockage, il devrait s'afficher 2 options. Choisissez `Stockage localement redondant` (LRS)
+  - Rendez-vous dans l'onglet "Étiquettes" et ajoutez les étiquettes suivantes&nbsp;:
     - `cohorte` : `4393`
     - `session` : `A22`
     - `cours` : `420-W44-SF`
     - `module` : `M04`
-  - Créez la ressource
-  - Une fois téléchargé, cliquez sur le bouton `Déployer` puis `Vérifier + créer`
+  - Cliquez sur l'onglet "Vérifier + Créer", attendez que Azure valide votre ressource et cliquez sur le bouton "Créer".
+  - Téléchargez la ressource.
 
 ### Tâche 2 - Affichage du Cloud Shell
 
 - Ouvrez le Cloud Shell
   - Cliquez sur le bouton `Cloud Shell` (en haut à droite) (Vous pouvez aussi utiliser l'URI https://shell.azure.com/)
-  - Choisissez `Bash` (en haut à droite)
-  - Si vous n'avez pas de Cloud Shell, cliquez sur `Créer un Cloud Shell`
+  - Choisissez `Bash`
+  - Cliquez sur "Afficher les paramètres avancés". Autrement, un nouveau compte de stockage sera créé. Sélectionnez&nbsp;:
+    - Votre bonne région
+    - Votre groupe de ressources
+    - Votre compte de stockage
+    - Créez un partage de fichier (le nom a peu d'importance).
   - Une fois le Cloud Shell ouvert, exécutez la commande `az account show`
-  - Notez le nom de votre abonnement sur votre cahier de laboratoire et valider que c'est le même que celui de la tâche précédente
-- Allez dans le dossier `~/clouddrive`
+  - Notez le nom de votre abonnement sur votre cahier de laboratoire et valider que c'est le même que celui de la tâche précédente.
+- Allez dans le dossier `~/clouddrive`. Vous pouvez utiliser les commandes Linux et Windows.
 - Créez le fichier `test.txt` avec le contenu suivant :
   - `Bonjour, je suis un fichier texte créé à partir du Cloud Shell`
 - Retournez dans le portail :
-  - Allez dans le groupe de ressources que vous aviez créé
+  - Allez dans le groupe de ressources que vous avez créé
   - Allez dans le compte de stockage
-  - Allez dans `partage de fichiers`
+  - Dans la section de gauche, allez dans `partage de fichiers`
   - Validez que vous voyez bien votre fichier
-  - Téléchargez le fichier `test.txt` sur votre machine et validez que le contenu est correct
+  - Téléchargez le fichier `test.txt` sur votre machine et validez que le contenu est correct.
 
 ### Tâche 3 - Création d'une ressource par le Cloud Shell
 
-- Ouvrez un terminal sur votre ordinateur
+- Ouvrez "CMD" ou "PowerShell" sur votre ordinateur
 - Vérifiez que vous êtes bien connecté à votre compte Azure
   - Exécutez la commande `az account show`
   - Valider que c'est le même que celui de la tâche précédente
