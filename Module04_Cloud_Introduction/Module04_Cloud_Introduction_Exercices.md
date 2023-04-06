@@ -118,16 +118,16 @@ Le but de cet exercice est de créer une VM Linux avec le port 80 ouvert. La pre
 
 À l'aide du portail Azure, créez une VM Linux avec le port 80 ouvert :
 
-- Créez le groupe de ressources "M04-Ex04-T01" dans la région "Canada East"
-- Créez une machine virtuelle à l'aide du menu "machine virtuelle" à partir du menu des services
-- Choisissez votre abonnement, le groupe de ressources et le nom "M04-Ex04-T01" pour votre machine virtuelle
-- Choisissez la région "Canada East"
+- Créez le groupe de ressources `M04-Ex04-T01` dans la région `Canada East`
+- Créez une machine virtuelle à l'aide du menu `machine virtuelle` à partir du menu des services
+- Choisissez votre abonnement, le groupe de ressources et le nom `M04-Ex04-T01` pour votre machine virtuelle
+- Choisissez la région `Canada East` (Prenez `Canada centre` si non disponible)
 - !!!Choisissez la taille de la machine virtuelle "Standard B1ls" qui est la plus petite machine virtuelle Linux!!!
-- Choisissez une image Linux de type Ubuntu Server 18.04 LTS ou supérieure
+- Choisissez une image Linux de type `Ubuntu Server 18.04 LTS` ou supérieure
 - Choisissez un nom d'utilisateur et un mot de passe
 - Autorisez le port 80 et le port 22
-- Dans l'onglet "Mis en réseau", vérifiez que vous avez bien une adresse IP publique qui sera créée
-- Dans l'onglet "Administration", cochez l'option "Activer l'arrêt automatique". Laissez l'heure par défaut et modifiez le fuseau horaire à "(UTC-05:00) Eastern Time (US & Canada)"
+- Dans l'onglet `Mis en réseau`, vérifiez que vous avez bien une adresse IP publique qui sera créée
+- Dans l'onglet `Administration`, cochez l'option "Activer l'arrêt automatique". Laissez l'heure par défaut et modifiez le fuseau horaire à "(UTC-05:00) Eastern Time (US & Canada)"
 - Ajoutez les étiquettes (tags) suivantes :
   - `cohorte` : `<NumeroCohorte(ex:4394)>`
   - `session` : `<Session(ex:H23)>`
@@ -137,9 +137,9 @@ Le but de cet exercice est de créer une VM Linux avec le port 80 ouvert. La pre
 - Connectez-vous à votre machine virtuelle en SSH à l'aide de l'adresse IP publique (ouvrez la ressource dans le portail Azure pour y accéder) et du nom d'utilisateur et du mot de passe que vous avez choisi
 - Sur votre machine virtuelle, exécutez la commande `sudo apt -y update` puis `sudo apt -y upgrade`
 - Installez le proxy Nginx avec la commande `sudo apt -y install nginx`
-- Éditez le fichier utilisé par défaut par Nginx (sur ma machine : "/var/www/html/index.nginx-debian.html") avec la commande `sudo nano <nom du fichier>` ou `sudo vi <nom du fichier>` et écrivez un message que vous devriez reconnaître.
+- Éditez le fichier utilisé par défaut par Nginx (sur ma machine : `/var/www/html/index.nginx-debian.html`) avec la commande `sudo nano <nom du fichier>` ou `sudo vi <nom du fichier>` et écrivez un message que vous devriez reconnaître.
 - À l'aide de votre navigateur, accédez à l'adresse IP publique de votre machine virtuelle et validez que vous voyez le message que vous avez écrit
-- Effacez votre groupe de ressources "M04-Ex04-T01" avec tout ce que vous avez dedans pour ne pas gaspiller d'argent
+- Effacez votre groupe de ressources `M04-Ex04-T01` avec tout ce que vous avez dedans pour ne pas gaspiller d'argent
 
 ### Tâche 2 - Création d'une VM Linux avec le Azure CLI
 
@@ -150,10 +150,10 @@ Le but de cet exercice est de créer une VM Linux avec le port 80 ouvert. La pre
   - Exécutez la commande `az account show`
   - Valider que c'est le même que celui de la tâche précédente
 
-- Créez un nouveau groupe de ressources. Utilisez la commande précédente pour créer un nouveau groupe de ressources nommé "M04-Ex04-T02"
+- Créez un nouveau groupe de ressources. Utilisez la commande précédente pour créer un nouveau groupe de ressources nommé `M04-Ex04-T02`
 - Listez les images disponibles. Utilisez la commande `az vm image list` pour lister les images disponibles
 - Listez versions disponibles pour l'image Ubuntu en utilisant la commande `az vm image list-skus --publisher "Canonical" --offer "UbuntuServer" --location "canadaeast"`
-- Dans le résultat, recherchez la version 18.04-LTS et notez le nom de la version
+- Dans le résultat, recherchez la version `18.04-LTS` et notez le nom de la version
 - Listez les tailles de VM disponibles. Utilisez la commande `az vm list-sizes --location canadaeast` pour lister les tailles de VM disponibles
 - Comme vous le voyez, il y a beaucoup de taille de VM. Pour cette tâche, nous allons utiliser la taille "Standard_B1ls" qui est la plus petite taille de VM Linux
 - Créez la VM avec la commande `az vm create --resource-group "M04-Ex04-T02" --name "M04-Ex04-T02-VM" --image "UbuntuLTS" --size "Standard_B1ls" --admin-username "adminuser" --admin-password "Password123.." --public-ip-sku Basic --location "canadaeast" --tags "cohorte=<NumeroCohorte(ex:4394)>" "session=<Session(ex:H23)>" "cours=420-W44-SF" "module=M04"` (Si vous utilisez un autre groupe de ressources, n'oubliez pas de le changer dans la commande)
@@ -164,7 +164,7 @@ Le but de cet exercice est de créer une VM Linux avec le port 80 ouvert. La pre
 - Connectez-vous à votre site web à l'aide de votre navigateur et vérifiez que vous voyez le message par défaut de Nginx
 - Connectez sur votre VM en SSH avec la commande `ssh adminuser@<adresse IP publique de votre VM>` et modifiez le fichier par défaut de Nginx avec la commande `sudo nano /var/www/html/index.nginx-debian.html` ou `sudo vi /var/www/html/index.nginx-debian.html` et écrivez un message que vous devriez reconnaître.
 - Validez que le site est bien modifié
-- Supprimer le groupe de ressources "M04-Ex04-T02" avec tout ce que vous avez dedans pour ne pas gaspiller d'argent avec la commande `az group delete --name "M04-Ex04-T02" --yes`
+- Supprimer le groupe de ressources `M04-Ex04-T02` avec tout ce que vous avez dedans pour ne pas gaspiller d'argent avec la commande `az group delete --name "M04-Ex04-T02" --yes`
 
 <details>
     <summary>Triche #1 - Création d'un groupe de ressources Exercice 4 / Tâche 2 :</summary>
@@ -177,14 +177,14 @@ az group create --name M04-Ex04-T02 --location canadaeast --tags "cohorte=<Numer
 
 ### Tâche 3 - Création d'une VM Linux à partir d'un template ARM
 
-- Débutez la création de la VM Linux "M04-Ex04-T03-VM" à partir du portail Azure. Au lieu de créer la ressource, téléchargez le template ARM de la VM
+- Débutez la création de la VM Linux `M04-Ex04-T03-VM` à partir du portail Azure. Au lieu de créer la ressource, téléchargez le template ARM de la VM
 - Positionnez-vous dans le répertoire de votre choix et désarchiver le fichier téléchargé
 - Modifiez le fichier `parameters.json` pour définir le mot de passe du compte administrateur (vers la fin du document JSON)
 - En ligne de commande, créez le groupe de ressources `M04-Ex04-T03`
 - Pour exécuter le déploiement, utilisez la commande `az deployment group create --resource-group M04-Ex04-T03 --template-file template.json --parameters parameters.json`
 - Installez Ngnix et ouvrez le port 80 avec les mêmes commandes que dans la tâche précédente mais en remplaçant le nom de la VM et celui du groupe de ressources
 - Validez que le tout fonctionne (Si le port n'est pas ouvert, l'ouvrir !)
-- Supprimer le groupe de ressources "M04-Ex04-T03" avec tout ce que vous avez dedans pour ne pas gaspiller d'argent avec la commande `az group delete --name "M04-Ex04-T03" --yes`
+- Supprimer le groupe de ressources `M04-Ex04-T03` avec tout ce que vous avez dedans pour ne pas gaspiller d'argent avec la commande `az group delete --name "M04-Ex04-T03" --yes`
 
 ## Exercice 5 - Création d'une instance de base de données et une application web à partir du portail Azure
 
@@ -195,8 +195,8 @@ Nous allons utiliser un niveau de calcul de type sans serveur (serverless) qui e
 ### Tâche 1 - Création d'une instance de base de données à partir du portail Azure
 
 - Connectez-vous au portail Azure
-- Créez le nouveau groupe de ressources "M04-Ex05-T01"
-- Créez une nouvelle instance de base de données nommée "M04-Ex05-T01-SQL-<matricule>" dans le groupe de ressources "M04-Ex05-T01" : vous aurez besoin de créer un serveur SQL, choisissez l'authentification de type "SQL"
+- Créez le nouveau groupe de ressources `M04-Ex05-T01`
+- Créez une nouvelle instance de base de données nommée `M04-Ex05-T01-SQL-<matricule>` dans le groupe de ressources `M04-Ex05-T01` : vous aurez besoin de créer un serveur SQL, choisissez l'authentification de type "SQL"
 - Pour l'environnement de charge de travail, choisissez "Développement"
 - Choisissez le niveau de calcul "Serverless" (Calcul + stockage) :
   - Niveau de service, choisissez "Usage général"
@@ -208,7 +208,7 @@ Nous allons utiliser un niveau de calcul de type sans serveur (serverless) qui e
 
 ### Tâche 2 - Création d'une application web à partir du portail
 
-- Créez une application web nommée "M04-Ex05-T01-Web-<matricule>" (Web App) dans le groupe de ressources "M04-Ex05-T01" :
+- Créez une application web nommée `M04-Ex05-T01-Web-<matricule>` (Web App) dans le groupe de ressources `M04-Ex05-T01` :
   - Choisissez publier "Code"
   - Pile d'exécution, choisissez ".NET 6 (LTS)"
   - Systeme d'exploitation, choisissez "Linux"
@@ -221,7 +221,7 @@ Nous allons utiliser un niveau de calcul de type sans serveur (serverless) qui e
     - cours=420-W44-SF
     - module=M04
   - Créez le service
-- Ouvrez le service et vérifier que l'app web est bien en ligne en utilisant l'URL fournie par le portail Azure (Exemple : https://m04-ex05-t01-web-<matricule>.azurewebsites.net)
+- Ouvrez le service et vérifier que l'app web est bien en ligne en utilisant l'URL fournie par le portail Azure (Exemple : https://m04-ex05-t01-web-\<matricule>.azurewebsites.net)
 - Vous devriez voir une page web avec le texte "Your web app is running and waiting for your content"
 
 #### Tâche 3 - Nettoyage des ressources
