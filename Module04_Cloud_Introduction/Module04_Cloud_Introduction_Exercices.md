@@ -245,7 +245,7 @@ Nous allons utiliser un niveau de calcul de type sans serveur (serverless) qui e
 - Construisez, dans une variable locale, votre chaine de connexion pour la base de données à partir de la chaine suivante :
 `connexionString="Server=tcp:m04-ex06-t01-sql-<matricule>.database.windows.net,1433;Initial Catalog=M04-Ex06-T01-DB;Persist Security Info=False;User ID=adminuser;Password=Password123..;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"` et exécuté la ligne dans bash (vous pouvez l'adapter pour cmd ou powershell)
 - Ajoutez les chaines de connexion pour l'application avec les commandes suivantes : `az webapp config connection-string set --name "M04-Ex06-T02-Web-<matricule>" --resource-group "M04-Ex06-T01" --settings "CatalogConnection=$connexionString" --connection-string-type SQLServer` et `az webapp config connection-string set --name "M04-Ex06-T02-Web-<matricule>" --resource-group "M04-Ex06-T01" --settings "IdentityConnection=$connexionString" --connection-string-type SQLServer`
-- Reprenez la version compilée et publiée de eShopOnWeb (https://github.com/dotnet-architecture/eShopOnWeb) : vous devriez avoir un fichier zip nommé "publishedArtifac.zip" dans le répertoire courant du dépôt.
+- Reprenez la version compilée et publiée de eShopOnWeb : vous devriez avoir un fichier zip nommé "publishedArtifac.zip" dans le répertoire courant du dépôt.
 - Déployez l'application web à partir du répertoire "Exercice6" à partir de la ligne de commande suivante : `az webapp deployment source config-zip --src publishedArtifac.zip --resource-group M04-Ex06-T01 --name "M04-Ex06-T02-Web-<matricule>"` 
 - Testez votre application web
 
