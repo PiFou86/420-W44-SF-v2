@@ -233,7 +233,7 @@ Nous allons utiliser un niveau de calcul de type sans serveur (serverless) qui e
 ### Tâche 1 - Création d'une instance de base de données à partir de la ligne de commande
 
 - Créez un nouveau groupe de ressources. Utilisez la commande précédente pour créer un nouveau groupe de ressources nommé "M04-Ex05-T02", utilisez la ligne de commande `az group create --name M04-Ex06-T01 --location canadacentral --tags "cohorte=<NumeroCohorte(ex:4394)>" "session=<Session(ex:H23)>" "cours=420-W44-SF" "module=M04"`
-- Utilisez la commande `az sql server create --resource-group "M04-Ex06-T01" --name "M04-Ex06-T01-SQL" --location "canadacentral" --admin-user "adminuser" --admin-password "Password123.." --enable-public-network true` pour créer un serveur de bases de données.
+- Utilisez la commande `az sql server create --resource-group "M04-Ex06-T01" --name "M04-Ex06-T01-SQL-<matricle>" --location "canadacentral" --admin-user "adminuser" --admin-password "Password123.." --enable-public-network true` pour créer un serveur de bases de données.
 - Créez une base de données en utilisant la commande `az sql db create     --resource-group "M04-Ex06-T01" --server "M04-Ex06-T01-SQL-<matricule>" --name "M04-Ex06-T01-DB" --edition "GeneralPurpose" --compute-model "Serverless" --family "Gen5" --capacity 1 --max-size 5GB`
 
 ### Tâche 2 - Création d'une application web à partir de la ligne de commande
@@ -242,7 +242,7 @@ Nous allons utiliser un niveau de calcul de type sans serveur (serverless) qui e
 - Créez une application web nommée "M04-Ex06-T02-Web-<matricule>" (App web) dans le groupe de ressources "M04-Ex06-T01" et le plan de service nommé "M04-Ex06-T02-AppServicePlan" à partir de la ligne de commande suivante : `az webapp create --resource-group "M04-Ex06-T01" --plan "M04-Ex06-T02-AppServicePlan" --name "M04-Ex06-T02-Web-<matricule>" --runtime "DOTNETCORE:6.0" --tags "cohorte=<NumeroCohorte(ex:4394)>" "session=<Session(ex:H23)>" "cours=420-W44-SF" "module=M04"`
 - Notez la valeur de la clef "defaultHostName" dans la sortie de la commande précédente. Vous aurez besoin de cette valeur pour essayer votre application web.
 - Testez votre application web
-- Construisez votre chaine de connexion pour la base de données à partir de la chaine suivante :
+- Construisez, dans une variable locale, votre chaine de connexion pour la base de données à partir de la chaine suivante :
 `connexionString="Server=tcp:m04-ex06-t01-sql-<matricule>.database.windows.net,1433;Initial Catalog=M04-Ex06-T01-DB;Persist Security Info=False;User ID=adminuser;Password=Password123..;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"` et exécuté la ligne dans bash (vous pouvez l'adapter pour cmd ou powershell)
 - Ajoutez les chaines de connexion pour l'application avec les commandes suivantes : `az webapp config connection-string set --name "M04-Ex06-T02-Web-<matricule>" --resource-group "M04-Ex06-T01" --settings "CatalogConnection=$connexionString" --connection-string-type SQLServer` et `az webapp config connection-string set --name "M04-Ex06-T02-Web-<matricule>" --resource-group "M04-Ex06-T01" --settings "IdentityConnection=$connexionString" --connection-string-type SQLServer`
 - Reprenez la version compilée et publiée de eShopOnWeb (https://github.com/dotnet-architecture/eShopOnWeb) : vous devriez avoir un fichier zip nommé "publishedArtifac.zip" dans le répertoire courant du dépôt.
