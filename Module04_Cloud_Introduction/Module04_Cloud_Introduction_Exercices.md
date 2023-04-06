@@ -205,6 +205,7 @@ Nous allons utiliser un niveau de calcul de type sans serveur (serverless) qui e
   - Validez que la case à cocher "Délai de pause automatique" est cochée et que le délai est de 1 heure
   - Baissez la taille du stockage à 5 Go (Coûts mensuel autour de 1.15$)
 - Choisissez un type de stockage "redondant localement"
+- Dans `Mise en réseau`, modifiez l'option `Méthode de connectivité` pour `Point de terminaison public`. Permettez ensuite aux services Azure d'accéder à ce serveur.
 
 ### Tâche 2 - Création d'une application web à partir du portail
 
@@ -248,6 +249,11 @@ Nous allons utiliser un niveau de calcul de type sans serveur (serverless) qui e
 - Reprenez la version compilée et publiée de eShopOnWeb : vous devriez avoir un fichier zip nommé "publishedArtifac.zip" dans le répertoire courant du dépôt.
 - Déployez l'application web à partir du répertoire "Exercice6" à partir de la ligne de commande suivante : `az webapp deployment source config-zip --src publishedArtifac.zip --resource-group M04-Ex06-T01 --name "M04-Ex06-T02-Web-<matricule>"` 
 - Testez votre application web
+- En cas d'erreur :
+  - Allez voir les logs de l'application web en vous rendant sur le portail Azure sur la ressource qui héberge votre site web / Flux de journal et observez l'erreur (La reproduire au besoin en rafaichissant la page)
+  - Si c'est une erreur de login : validez que la chaine de connexion est bonne dans les paramètres du site / chaine de connexion (les deux chaines)
+  - Si c'est une erreur de réseau : validez que vous avez bien créé votre serveur SQL, validez que les services Azure ont bien accès au serveur dans "Mise en réseau".
+  - N'oubliez pas de redémarrer l'application Web entre chaque test
 
 <details>
     <summary>Générer une version qui crée les tables au démarrage de l'application web</summary>
