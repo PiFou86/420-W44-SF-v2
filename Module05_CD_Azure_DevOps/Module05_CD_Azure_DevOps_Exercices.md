@@ -43,8 +43,8 @@ Pour vous aider, vous pouvez utiliser le PDF que vous allez trouver à la racine
   - Ajoutez l'artefact "eShopOnWeb" qui a été créé dans le pipeline d'intégration continu
   - En début de pipeline, ajoutez une tâche de type "File transform" pour modifier le fichier "appsettings.json" pour qu'il contienne la bonne chaîne de connexion à la base de données
   - À la suite de la tâche de déploiement du fichier ARM, ajoutez une tâche de type "Azure App Service Deploy" dans le stage "Dev" et configurez le pour qu'il déploie l'application sur l'application web
-  - Dans l'onglet "Variables", ajoutez une variable nommée "ConnectionString.CatalogConnection" et configurez la pour qu'elle contienne la bonne chaîne de connexion à la base de données
-  - Faites de même pour la variable "ConnectionString.IdentityConnection"
+  - Dans l'onglet "Variables", ajoutez une variable nommée "ConnectionStrings.CatalogConnection" et configurez la pour qu'elle contienne la bonne chaîne de connexion à la base de données
+  - Faites de même pour la variable "ConnectionStrings.IdentityConnection"
 - Essayez de déployer votre application et vérifiez que l'application est bien déployée et que la base de données est bien créée
 
 ### Tâche 5 - Modifier les variables de création des ressources
