@@ -18,6 +18,7 @@ namespace GC.WebReact
             // Add services to the container.
             var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
             Console.Out.WriteLine("Connection string : " + connectionString);
+            Console.Out.WriteLine("Début configuration de l'injection de dépendances.");
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
             //options.UseSqlServer(connectionString, b => b.MigrationsAssembly("GC.WebReact").EnableRetryOnFailure()));
             options.UseSqlServer(connectionString, b => b.MigrationsAssembly("GC.WebReact")));
@@ -47,6 +48,7 @@ namespace GC.WebReact
             builder.Services.AddScoped<GestionClientsBL>();
             builder.Services.AddHealthChecks().AddSqlServer(connectionString, tags: new[] { "db" });
 
+            Console.Out.WriteLine("Début configuration du middleware.");
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -69,12 +71,6 @@ namespace GC.WebReact
                         context.Database.Migrate();
                     }
                 }
-            }
-            catch (Exception ex)
-            {
-                Console.Error.WriteLine(ex.Message);
-                throw;
-            }
             //app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseRouting();
@@ -98,7 +94,16 @@ namespace GC.WebReact
     //.RequireAuthorization();
             app.MapHealthChecks("/healthz/db");
 
+            Console.Out.WriteLine("Début exécution de l'application.");
             app.Run();
-        }
+            }
+            catch (Exception ex)
+            {
+                Console.Error.WriteLine("Erreur !");
+                Console.Error.WriteLine(ex.Message);
+                Console.Error.WriteLine(ex.StackTrace);
+                throw;
+            }
+                    }
     }
 }

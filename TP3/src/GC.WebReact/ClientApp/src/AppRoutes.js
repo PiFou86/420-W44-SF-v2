@@ -22,8 +22,8 @@ const AppRoutes = [
         path: '/fetch-clients',
         //requireAuth: true,
         element: <FetchClients />
-    },
-  ...ApiAuthorzationRoutes
+    }//,
+  //...ApiAuthorzationRoutes
 ];
 
 export default AppRoutes;
