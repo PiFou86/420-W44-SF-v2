@@ -90,3 +90,19 @@ Le pipeline de déploiement dédié à l'environnement de développement doit ê
 Le pipeline de déploiement dédié à l'environnement de production doit être déployé dans trois environnements de déploiement : "unit", "fonctionnel" et "production". L'environnement "unit" doit être déployé dans un groupe de ressources différent de l'environnement "fonctionnel" et de l'environnement "production". L'environnement "fonctionnel" doit être déployé automatiquement en cas de réussite des précédents sur acceptation d'individus spécifiques. L'environnement "production" doit être déployé automatiquement en cas de réussite des précédents sur acceptation d'individus spécifiques. Pour le projet, ajouter un des binômes ainsi que mon compte (Voir les gates).
 
 Tout partage de code, d'explication, de bouts de texte, etc. est considéré comme du plagiat. Pour plus de détails, consultez le site (et ses vidéos) [Sois intègre du Cégep de Sainte-Foy](http://csfoy.ca/soisintegre) ainsi que [l'article 6.1.12 de la PÉA](https://www.csfoy.ca/fileadmin/documents/notre_cegep/politiques_et_reglements/5.9_PolitiqueEvaluationApprentissages_2019.pdf)
+
+## Rappel - débugage
+
+Si vous avez des erreurs au moment du déploiement, vous pouvez :
+
+- Validez que vous avez bien tous les artefacts
+- Ajouter une étape de débogage dans votre pipeline de déploiement en ajoutant des tâches `Bash` ou `PowerShell` pour afficher les valeurs des variables d'environnement, le contenu des fichiers de configuration ou le contenu des répertoires (tree)
+
+Si vous avez des erreurs une fois l'application déployée, vous pouvez :
+
+- Sur le portail azure, alidez que vous avez bien créé un `App service` de type Linux
+- Dans votre pipeline de déploiement, validez que l'étape de déploiement de l'application Web est bien configurée pour `Linux` et non `Windows`
+- Validez votre chaine de connection en allant consulter le fichier appsettings à partir du portail Azure :
+  - À partir de la ressource de l'application Web, allez dans le menu  `Outils de développement > Outils avancés` puis `accéder`
+- À partir du portail Azure, consultez le journal de votre application `Supervision > Flux de journaux`
+- À partir du portail Azure, vous pouvez aussi passer l'application en mode développement en ajoutant le paramètre `ASPNETCORE_ENVIRONMENT=Development` pour cela, allez dans le menu `Paramètres > Configuration` et ajoutez le paramètre d'application `ASPNETCORE_ENVIRONMENT` avec la valeur `Development`. Allez ensuite dans le menu `Vue d'ensemble` et arrêtez et démarrez l'application. Le site devrait alors afficher les exceptions.

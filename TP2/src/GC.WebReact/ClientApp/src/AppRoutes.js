@@ -15,15 +15,15 @@ const AppRoutes = [
   },
     {
         path: '/fetch-data',
-        requireAuth: true,
+        //requireAuth: true,
         element: <FetchData />
     },
     {
         path: '/fetch-clients',
-        requireAuth: true,
+        //requireAuth: true,
         element: <FetchClients />
-    },
-  ...ApiAuthorzationRoutes
+    }//,
+  //...ApiAuthorzationRoutes
 ];
 
 export default AppRoutes;

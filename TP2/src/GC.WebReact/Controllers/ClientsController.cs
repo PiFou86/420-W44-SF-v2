@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace GC.WebReact.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [Route("[controller]")]
     [ApiController]
     public class ClientsController : ControllerBase

@@ -1,5 +1,5 @@
 ﻿import React, { Component } from 'react';
-import authService from './api-authorization/AuthorizeService'
+//import authService from './api-authorization/AuthorizeService'
 
 export class FetchClients extends Component {
     static displayName = FetchClients.name;
@@ -57,19 +57,21 @@ export class FetchClients extends Component {
     }
 
     async genererClients() {
-        const token = await authService.getAccessToken();
-        await fetch('clients/generer', {
-            headers: !token ? {} : { 'Authorization': `Bearer ${token}` }
-        });
+        //const token = await authService.getAccessToken();
+        //await fetch('clients/generer', {
+        //    headers: !token ? {} : { 'Authorization': `Bearer ${token}` }
+        //});
+        await fetch('clients/generer');
 
         await this.populateClientsData();
     }
 
     async populateClientsData() {
-        const token = await authService.getAccessToken();
-        const response = await fetch('clients', {
-            headers: !token ? {} : { 'Authorization': `Bearer ${token}` }
-        });
+        //const token = await authService.getAccessToken();
+        //const response = await fetch('clients', {
+        //    headers: !token ? {} : { 'Authorization': `Bearer ${token}` }
+        //});
+        const response = await fetch('clients');
         const data = await response.json();
         this.setState({ clients: data, loading: false });
     }

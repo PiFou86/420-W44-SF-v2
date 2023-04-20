@@ -64,38 +64,38 @@ namespace GC.WebReact
 
             try
             {
-                using (var scope = app.Services.CreateScope())
+                 using (var scope = app.Services.CreateScope())
+                 {
+                     using (var context = scope.ServiceProvider.GetService<ApplicationDbContext>())
+                     {
+                         context.Database.Migrate();
+                     }
+                 }
+                //app.UseHttpsRedirection();
+                app.UseStaticFiles();
+                app.UseRouting();
+
+                //app.UseAuthentication();
+                //app.UseIdentityServer();
+                //app.UseAuthorization();
+
+                app.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller}/{action=Index}/{id?}");
+                app.MapRazorPages();
+
+                app.MapFallbackToFile("index.html");
+
+                app.MapHealthChecks("/healthz/live", new HealthCheckOptions
                 {
-                    using (var context = scope.ServiceProvider.GetService<ApplicationDbContext>())
-                    {
-                        context.Database.Migrate();
-                    }
-                }
-            //app.UseHttpsRedirection();
-            app.UseStaticFiles();
-            app.UseRouting();
+                    Predicate = healthCheck => !healthCheck.Tags.Contains("db")
+                });
+        //        app.MapHealthChecks("/healthz/auth")
+        //.RequireAuthorization();
+                app.MapHealthChecks("/healthz/db");
 
-            //app.UseAuthentication();
-            //app.UseIdentityServer();
-            //app.UseAuthorization();
-
-            app.MapControllerRoute(
-                name: "default",
-                pattern: "{controller}/{action=Index}/{id?}");
-            app.MapRazorPages();
-
-            app.MapFallbackToFile("index.html");
-
-            app.MapHealthChecks("/healthz/live", new HealthCheckOptions
-            {
-                Predicate = healthCheck => !healthCheck.Tags.Contains("db")
-            });
-    //        app.MapHealthChecks("/healthz/auth")
-    //.RequireAuthorization();
-            app.MapHealthChecks("/healthz/db");
-
-            Console.Out.WriteLine("Début exécution de l'application.");
-            app.Run();
+                Console.Out.WriteLine("Début exécution de l'application.");
+                app.Run();
             }
             catch (Exception ex)
             {
@@ -104,6 +104,6 @@ namespace GC.WebReact
                 Console.Error.WriteLine(ex.StackTrace);
                 throw;
             }
-                    }
+        }
     }
 }

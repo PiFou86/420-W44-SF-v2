@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace GC.WebReact.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [ApiController]
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
