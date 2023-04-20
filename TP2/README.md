@@ -91,6 +91,13 @@ Le pipeline de déploiement dédié à l'environnement de production doit être 
 
 Tout partage de code, d'explication, de bouts de texte, etc. est considéré comme du plagiat. Pour plus de détails, consultez le site (et ses vidéos) [Sois intègre du Cégep de Sainte-Foy](http://csfoy.ca/soisintegre) ainsi que [l'article 6.1.12 de la PÉA](https://www.csfoy.ca/fileadmin/documents/notre_cegep/politiques_et_reglements/5.9_PolitiqueEvaluationApprentissages_2019.pdf)
 
+## Validations rapides de l'état du site
+
+Vous pouvez effectuer une requête GET sur l'URL suivante :
+
+- Pour valider que le site est en ligne : `https://<nom-du-site>.azurewebsites.net/healthz/live`
+- Pour valider la connectivité à la base de données : `https://<nom-du-site>.azurewebsites.net/healthz/db`
+
 ## Rappel - débugage
 
 Si vous avez des erreurs au moment du déploiement, vous pouvez :
