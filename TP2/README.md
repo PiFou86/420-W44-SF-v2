@@ -36,7 +36,7 @@
 - Répartition des tâches entre partenaires avec nombre d'heures par partenaire et total (5 points)
 - Ajoutez `pfleon@csfoy.ca` comme utilisateur et administrateur avec une licence de type Basic (Le faire au niveau de l'organisation) (-10 points si je dois courir après vous)
 - Répondre aux questions suivantes (15 points):
-  - En quoi l'utilisation des outils DevOps permet une bonne compréhension des équipes et une diminution des risques de déploiement ?
+  - En quoi l'utilisation des outils DevOps permet une bonne compréhension entre les équipes et une diminution des risques lors du déploiement ?
   - En quoi est-il plus approprié d'utiliser un service PaaS pour la base de données et l'application Web plutôt que des services de VM ? (Comparez le coût des ressources et essayez d'évaluer les avantages inconvénients du PaaS vs IaaS dans notre situation)
 - Fichier `AUTHORS.md` : (Jusqu'à -10 points pour non respect des consignes)
   - lien YouTube
