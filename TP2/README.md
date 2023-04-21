@@ -115,3 +115,7 @@ Si vous avez des erreurs une fois l'application déployée, vous pouvez :
   - À partir de la ressource de l'application Web, allez dans le menu  `Outils de développement > Outils avancés` puis `accéder`
 - À partir du portail Azure, consultez le journal de votre application `Supervision > Flux de journaux`
 - À partir du portail Azure, vous pouvez aussi passer l'application en mode développement en ajoutant le paramètre `ASPNETCORE_ENVIRONMENT=Development` pour cela, allez dans le menu `Paramètres > Configuration` et ajoutez le paramètre d'application `ASPNETCORE_ENVIRONMENT` avec la valeur `Development`. Allez ensuite dans le menu `Vue d'ensemble` et arrêtez et démarrez l'application. Le site devrait alors afficher les exceptions.
+
+## Bugs Azure et contournements
+
+- En copiant un stage, certains ont eu la mauvaise surprise d'avoir des déploiements d'ARMs qui étaient validés mais qui n'était plus trouvés au moment de la création affective. Pour contourner ce problème, la solution qui paraissait fonctionner est de retourner dans la tâche qui échoue en remettant explicitement la valeur qui s'y trouve déjà, ici les noms du fichiers de modèles de gabarit et de paramètres. Même si le comportement et la solution semblent incohérentes, cette voie de contournement à résolution le problème dans la plupart des cas.
