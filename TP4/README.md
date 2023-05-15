@@ -8,7 +8,7 @@
 - Toute copie de code, de portion de code, d’algorithme ou de texte doit faire mention de sa source
 - L’emprunt ou la copie de code ou de portions de code est interdite
 - Tout constat de plagiat, tricherie ou fraude sera automatiquement déclaré à la Direction et les sanctions prévues seront appliquées
-- Durée : 5 x 3 heures + travail à la maison
+- Durée : 3 x 3 heures + travail à la maison
 - Plate forme : Docker, Kubernetes, Azure, Azure Dev Ops, Visual Studio Code et dotnet/react
 - Pas d'utilisation de Visual Studio (vous êtes des DevOps et l'entreprise ne paie pas de licence pour cela) : vous devez tout faire ne ligne de commande
 
