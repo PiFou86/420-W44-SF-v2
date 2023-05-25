@@ -22,6 +22,8 @@ Faites attention de bien garder une trace de vos ressources (fichiers YAML, comm
 
 ### Exercice 1.2 - MySQL
 
+N'oubliez jamais : quand vous déployez une base de données, vous devez toujours vous poser la question de la persistance de données. Est-ce que votre client veut que les données persistent d'une déploiement à l'autre ?
+
 - Créez un déploiement nommé "mysql" avec l'image `mysql:5.7` et les paramètres suivants :
   - Variables d'environnement (voir [https://hub.docker.com/_/mysql](https://hub.docker.com/_/mysql) pour plus d'informations) :
     - `MYSQL_ROOT_PASSWORD` : `Passw0rdRoot`
