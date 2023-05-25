@@ -17,7 +17,7 @@
 - Créer une image de conteneur Docker pour une application web
 - Effectuer le déploiement d'une base de données SQL Server dans Kubernetes
 - Effectuer le déploiement d'une application web dans Kubernetes
-- Utiliser 3 environnements de déploiement (dev, test, prod)
+- Utiliser 3 environnements de déploiement (unitaire, acceptation, production)
 - Être capable d'expliquer la partie théorique et technique
 
 ## Remise
