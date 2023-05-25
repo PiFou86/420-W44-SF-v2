@@ -10,7 +10,7 @@
 - Tout constat de plagiat, tricherie ou fraude sera automatiquement déclaré à la Direction et les sanctions prévues seront appliquées
 - Durée : 4 x 3 heures + travail à la maison
 - Plate forme : Docker, Kubernetes, Visual Studio Code et dotnet/react
-- Pas d'utilisation de Visual Studio (vous êtes des DevOps et l'entreprise ne paie pas de licence pour cela) : vous devez tout faire ne ligne de commande
+- Pas d'utilisation de Visual Studio (vous êtes des DevOps et l'entreprise ne paie pas de licence pour cela) : vous devez tout faire en ligne de commande
 
 ## Objectifs
 
