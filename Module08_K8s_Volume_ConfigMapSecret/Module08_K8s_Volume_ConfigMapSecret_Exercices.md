@@ -29,9 +29,7 @@ Faites attention de bien garder une trace de vos ressources (fichiers YAML, comm
     - `MYSQL_USER` : `monUtilisateur`
     - `MYSQL_PASSWORD` : `Passw0rd`
   - Un volume nommé "mysql-data" de type "hostPath" et montez le dans le répertoire `/var/lib/mysql` du conteneur
-  - Dans le répertoire du volume, créez un fichier `test.txt` dans le répertoire que vous partager à partir de votre hôte. 
 - Appliquez votre déploiement
-- Validez que le fichier est visible `/var/lib/mysql` dans le conteneur
 - Exposez le déploiement en service de type LoadBalancer et validez que vous pouvez vous connecter à votre base de données depuis votre hôte
 
 ## Exercice 2 - ConfigMap et Secret
