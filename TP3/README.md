@@ -71,7 +71,7 @@ Chaque environnement doit :
 - Le conteneur contenant l'application Web doit avoir les tags suivants :
   - app : GC.WebReact
   - tier : web
-- Seules le tier web de chaque environnement doit être exposé à l'extérieur du cluster Kubernetes :
+- Seul le tier web de chaque environnement doit être exposé à l'extérieur du cluster Kubernetes :
   - unitaire : port 30000
   - acceptation : port 30001
   - production : port 30002
@@ -86,4 +86,4 @@ Tout partage de code, d'explication, de bouts de texte, etc. est considéré com
 
 - plus petit image docker de la cohorte 5%
 - Validation de la santé du conteneur 5%
-- Un seul ensemble de fichiers YAML pour tous les environnements
+- Un seul ensemble de fichiers YAML pour tous les environnements 5%
