@@ -17,10 +17,12 @@ Faites attention de bien garder une trace de vos ressources (fichiers YAML, comm
   - Dans le répertoire du volume, créez un fichier `index.html` dans le répertoire que vous partager à partir de votre hôte.
 - Appliquez votre déploiement
 - Validez que le fichier est visible dans le répertoire `/usr/share/nginx/html` du conteneur (`kubectl exec -it nginx-xxxxx -- ls /usr/share/nginx/html`)
-- Exposez votre déploiement sur le port 80 en service de type LoadBalancer et validez que vous pouvez accéder à votre page web depuis votre hôte
+- Exposez votre déploiement sur le port 80 en service de type NodePort et validez que vous pouvez accéder à votre page web depuis votre hôte
 - Supprimez votre déploiement et votre service
 
 ### Exercice 1.2 - MySQL
+
+N'oubliez jamais : quand vous déployez une base de données, vous devez toujours vous poser la question de la persistance de données. Est-ce que votre client veut que les données persistent d'une déploiement à l'autre ?
 
 - Créez un déploiement nommé "mysql" avec l'image `mysql:5.7` et les paramètres suivants :
   - Variables d'environnement (voir [https://hub.docker.com/_/mysql](https://hub.docker.com/_/mysql) pour plus d'informations) :
@@ -29,10 +31,8 @@ Faites attention de bien garder une trace de vos ressources (fichiers YAML, comm
     - `MYSQL_USER` : `monUtilisateur`
     - `MYSQL_PASSWORD` : `Passw0rd`
   - Un volume nommé "mysql-data" de type "hostPath" et montez le dans le répertoire `/var/lib/mysql` du conteneur
-  - Dans le répertoire du volume, créez un fichier `test.txt` dans le répertoire que vous partager à partir de votre hôte. 
 - Appliquez votre déploiement
-- Validez que le fichier est visible `/var/lib/mysql` dans le conteneur
-- Exposez le déploiement en service de type LoadBalancer et validez que vous pouvez vous connecter à votre base de données depuis votre hôte
+- Exposez le déploiement en service de type NodePort et validez que vous pouvez vous connecter à votre base de données depuis votre hôte
 
 ## Exercice 2 - ConfigMap et Secret
 
@@ -44,7 +44,7 @@ Faites attention de bien garder une trace de vos ressources (fichiers YAML, comm
 - Modifiez votre déploiement "nginx" de l'exercice précédent pour utiliser le fichier de configuration que vous venez de créer (i.e. il n'utilise plus le fichier `index.html` que vous avez créé dans le répertoire du volume)
 - Appliquez vos déploiements
 - Validez que le fichier est visible dans le répertoire `/usr/share/nginx/html` du conteneur
-- Exposez votre déploiement sur le port 80 en service de type LoadBalancer et validez que vous pouvez accéder à votre page web depuis votre hôte
+- Exposez votre déploiement sur le port 80 en service de type NodePort et validez que vous pouvez accéder à votre page web depuis votre hôte
 - Supprimez les ressources
 
 ### Exercice 2.2 - MySQL
@@ -68,4 +68,4 @@ Faites attention de bien garder une trace de vos ressources (fichiers YAML, comm
 - Créez un/des fichier(s) de déploiement Kubernetes pour votre projet :
   - L'URL d'exposition doit être personnalisée (i.e. port 12345) et passée par variable d'environnement
   - La chaînes de connexion à la base de données doit être passée par variable d'environnement
-  - Exposez votre site web sur le port 80 en service de type LoadBalancer
+  - Exposez votre site web sur le port 80 en service de type NodePort

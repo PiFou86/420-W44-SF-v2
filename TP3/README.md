@@ -2,13 +2,13 @@
 
 ## Informations
 
-- Remise du travail: 7 février 2023, 23:59
+- Remise du travail: dimanche 4 juin 2023, 23:59
 - Ce travail est réalisé en équipe de 2 personnes et seuls les membres de cette équipe y contribuent
 - Toutes les réponses fournies doivent être originales (produites par l’étudiant ou un membre de l’équipe)
 - Toute copie de code, de portion de code, d’algorithme ou de texte doit faire mention de sa source
 - L’emprunt ou la copie de code ou de portions de code est interdite
 - Tout constat de plagiat, tricherie ou fraude sera automatiquement déclaré à la Direction et les sanctions prévues seront appliquées
-- Durée : 3 x 3 heures + travail à la maison
+- Durée : 4 x 3 heures + travail à la maison
 - Plate forme : Docker, Kubernetes, Visual Studio Code et dotnet/react
 - Pas d'utilisation de Visual Studio (vous êtes des DevOps et l'entreprise ne paie pas de licence pour cela) : vous devez tout faire ne ligne de commande
 
@@ -17,7 +17,7 @@
 - Créer une image de conteneur Docker pour une application web
 - Effectuer le déploiement d'une base de données SQL Server dans Kubernetes
 - Effectuer le déploiement d'une application web dans Kubernetes
-- Utiliser 3 environnements de déploiement (dev, test, prod)
+- Utiliser 3 environnements de déploiement (unitaire, acceptation, production)
 - Être capable d'expliquer la partie théorique et technique
 
 ## Remise
@@ -71,7 +71,7 @@ Chaque environnement doit :
 - Le conteneur contenant l'application Web doit avoir les tags suivants :
   - app : GC.WebReact
   - tier : web
-- Seules le tier web de chaque environnement doit être exposé à l'extérieur du cluster Kubernetes :
+- Seul le tier web de chaque environnement doit être exposé à l'extérieur du cluster Kubernetes :
   - unitaire : port 30000
   - acceptation : port 30001
   - production : port 30002
@@ -84,6 +84,6 @@ Tout partage de code, d'explication, de bouts de texte, etc. est considéré com
 
 ## Bonus
 
-- plus petit image docker de la cohorte 5%
+- Plus petit image docker de la cohorte 5%
 - Validation de la santé du conteneur 5%
-- Un seul ensemble de fichiers YAML pour tous les environnements
+- Un seul ensemble de fichiers YAML pour tous les environnements 5%

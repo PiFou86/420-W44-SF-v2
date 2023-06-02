@@ -36,7 +36,7 @@ Dans cet exercice, validez tout le temps que vous êtes bien dans le pod en list
 - Retournez dans votre pod avec la commande `attach` précédemment fournie lorsque vous êtes sorti du conteneur
 - Sortez du pod
 - Écrivez une commande qui permet d'exécuter la commande `sh` en mode interactif dans le pod précédent et sortez du pod
-- Supprimez votre précédent déploiement avec la commande `kubectl delete deployments monbash`
+- Supprimez votre précédent déploiement avec la commande `kubectl delete pods monbash`
 - Validez que le pod est bien en train d'être supprimé en listant les pods : notez l'idée que l'orchestrateur essaie de répondre à vos commandes avec une certaine latence
 
 <details>
