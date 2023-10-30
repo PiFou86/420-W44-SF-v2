@@ -19,6 +19,7 @@ Dans cet exercice, vous allez vous installer un environnement de travail pour la
 git config --global user.name "John Doe"
 git config --global user.email "john.doe@csfoy.ca"
 git config --global core.editor "code --wait"
+git config --global --list
 ```
 
 ### Installation Docker Desktop
@@ -30,7 +31,6 @@ git config --global core.editor "code --wait"
 
 - Au besoin, installer [Visual Studio Code](https://code.visualstudio.com/)
 - Installer les extensions suivantes :
-  - Contrôle de code source
   - Docker
   - Kubernetes
 
