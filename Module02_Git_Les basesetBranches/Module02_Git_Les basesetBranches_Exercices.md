@@ -6,14 +6,14 @@ Dans cet exercice, vous allez développer des tâches liées à des branches d'u
 
 ## Étape 1 - Création d'un dépôt GitHub
 
-- Dans le service GitHub, créez le projet Git `420-W44-SF-M02`
-- Ajouter une description résumant le projet
+- Dans le service GitHub, créez le dépôt Git `420-W44-SF-M02`
+- Ajouter une description résumant le dépôt
 - Choisissez la visibilité `public`
 - N'ajoutez pas de fichier `README.md` ou de fichier `.gitignore` pour le moment
-- À ce niveau, vous devriez avoir un projet vide
+- À ce niveau, vous devriez avoir un dépôt vide
 - Allez dans le menu `Settings` et ajoutez votre enseignant (@PiFou86) comme collaborateur
 
-## Étape 2 - Initialisation du projet
+## Étape 2 - Initialisation du dépôt
 
 - Sur votre machine, à partir d'une fenêtre de type `ligne de commande`, créez le sous-dossier `420-W44-SF-M02` dans le dossier de votre choix
 - À l'intérieur de ce dossier, créez un fichier `README.md` et ajoutez-y le texte suivant :
@@ -41,14 +41,14 @@ FichierIgnore.md
 - Affichez le status du dépôt (`git status`)
 - Notez que le fichier `FichierIgnore.md` est présent dans le répertoire mais est ignoré par Git
 - Ajoutez les fichiers `README.md` et `.gitignore` au dépôt (`git add README.md .gitignore`)
-- Validez les changements (`git commit -m "Initialisation du projet"`)
+- Validez les changements (`git commit -m "Initialisation du dépôt"`)
 
 ## Étape 3 - Envoi des modifications sur le dépôt distant
 
-- Rafraîchissez la page de votre projet sur GitHub
+- Rafraîchissez la page de votre dépôt sur GitHub
 - Que constatez-vous ?
 - Nous allons maintenant envoyer les modifications sur le dépôt distant :
-  - Notez les commandes proposées sur la page de votre projet
+  - Notez les commandes proposées sur la page de votre dépôt
   - Essayez de déduire ce que fait chacune de ces commandes
   - À l'aide de ces commandes, utilisez simplement les commandes les plus pertinentes (pas besoin de tout copier-coller):
     - Ajout du dépôt distant (`git remote add origin <url>`)
@@ -58,8 +58,8 @@ FichierIgnore.md
 
 ## Étape 4 - Création d'un modèle d'issue
 
-- Retournez sur votre projet dans GitHub
-- Allez dans le menu `settings` : vous vous retrouvez sur la page des paramètres généraux du projet
+- Retournez sur votre dépôt dans GitHub
+- Allez dans le menu `settings` : vous vous retrouvez sur la page des paramètres généraux du dépôt
 - Allez dans le menu `Features/Issues` et cliquez sur `Set up templates`
 - Choisissez `Set up templates` dans le menu déroulant et prenez `Bug report` comme modèle
 - Enregistrez les modifications
@@ -69,7 +69,7 @@ FichierIgnore.md
 - Créez une branche `develop` à partir de la branche `master` (`git checkout -b develop`)
 - Pousser les modifications sur le dépôt distant (`git push --set-upstream origin develop`)
 - Validez que la branche `develop` est présente sur GitHub
-- Allez dans les `Settings` de votre projet et ajoutez une protection de branche pour la branche `main`
+- Allez dans les `Settings` de votre dépôt et ajoutez une protection de branche pour la branche `main`
   - Cochez `Require a pull request before merging`
   - Cochez `Do not allow bypassing the above settings`
   - Décochez les autres options
@@ -78,7 +78,7 @@ FichierIgnore.md
 
 ## Étape 6 - Création d'un ticket
 
-- Retournez sur votre projet dans GitHub
+- Retournez sur votre dépôt dans GitHub
 - Allez dans le menu `Issues` et cliquez sur `New issue`
 - Choisissez `Bug report` comme modèle
 - Dans le titre du ticket, ajoutez le texte suivant : `Modification des informations du README.md`
