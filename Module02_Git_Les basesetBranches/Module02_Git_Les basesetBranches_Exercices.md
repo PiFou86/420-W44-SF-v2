@@ -66,7 +66,7 @@ FichierIgnore.md
 
 ## Étape 5 - Création d'une branche
 
-- Créez une branche `develop` à partir de la branche `master` (`git checkout -b develop`)
+- Créez une branche `develop` à partir de la branche `main` (`git checkout -b develop`)
 - Pousser les modifications sur le dépôt distant (`git push --set-upstream origin develop`)
 - Validez que la branche `develop` est présente sur GitHub
 - Allez dans les `Settings` de votre dépôt et ajoutez une protection de branche pour la branche `main`
