@@ -15,7 +15,7 @@
 
 ## Création du projet Azure DevOps
 
-- Sur votre poste de développement, clonez le dépôt « [https://github.com/dotnet-architecture/eShopOnWeb](https://github.com/dotnet-architecture/eShopOnWeb) »
+- Sur votre poste de développement, clonez le dépôt "https://github.com/PiFou86/eShopOnWeb_net60" (Version fixe prise de [https://github.com/dotnet-architecture/eShopOnWeb](https://github.com/dotnet-architecture/eShopOnWeb) )
 - Désactivez le suivi de sources de votre nouveau répertoire en supprimant le répertoire « .git »
 - Initialisez votre répertoire avec les sources actuelles avec « git init »
 - Ajoutez tous vos fichiers et validez la version actuelle
