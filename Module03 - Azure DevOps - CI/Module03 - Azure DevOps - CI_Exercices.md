@@ -63,6 +63,17 @@ cd bin/publishedArtifact ; dotnet Web.dll
 
 ## Création d’un pipeline avec l’interface classique
 
+<details>
+    <summary>Si vous ne pouvez pas voir la création classique</summary>
+
+- Allez dans "Organization Settings"
+- Allez dans "Pipelines / Settings"
+- Allez désactiver les options "Disable creation of classic release pipelines" et "Disable creation of classic build pipelines"
+
+![Activation des "modes classiques"](img/activer_mode_classic.png)
+
+</details>
+
 ### Étapes
 
 - Créez le pipeline classique « eShopOnWeb_CI » qui s’appuie sur les sources de votre dépôt git
