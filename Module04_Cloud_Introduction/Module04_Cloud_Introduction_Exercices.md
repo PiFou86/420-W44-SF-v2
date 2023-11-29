@@ -304,6 +304,8 @@ using (var scope = app.Services.CreateScope())
 }
 ```
 
+La version du code utilisée est disponible à l'adresse suivante : https://github.com/PiFou86/eShopOnWeb_net60
+
 </details>
 
 ### Tâche 3 - Nettoyage
