@@ -222,7 +222,7 @@ Nous allons utiliser un niveau de calcul de type sans serveur (serverless) qui e
     - cours=420-W44-SF
     - module=M04
   - Créez le service
-- Ouvrez le service et vérifier que l'app web est bien en ligne en utilisant l'URL fournie par le portail Azure (Exemple : https://m04-ex05-t01-web-\<matricule>.azurewebsites.net)
+- Ouvrez le service et vérifier que l'app web est bien en ligne en utilisant l'URL fournie par le portail Azure (Exemple : `https://m04-ex05-t01-web-<matricule>.azurewebsites.net`)
 - Vous devriez voir une page web avec le texte "Your web app is running and waiting for your content"
 
 #### Tâche 3 - Nettoyage des ressources
