@@ -2,13 +2,13 @@
 
 ## Informations
 
-- Remise du travail: 26 avril 2023, 23:59
+- Remise du travail: 11 janvier 2024, 23:59
 - Ce travail est réalisé en équipe de 2 personnes et seuls les membres de cette équipe y contribuent
 - Toutes les réponses fournies doivent être originales (produites par l’étudiant ou un membre de l’équipe)
 - Toute copie de code, de portion de code, d’algorithme ou de texte doit faire mention de sa source
 - L’emprunt ou la copie de code ou de portions de code est interdite
 - Tout constat de plagiat, tricherie ou fraude sera automatiquement déclaré à la Direction et les sanctions prévues seront appliquées
-- Durée : 2 x 3 heures + travail à la maison
+- Durée : 3 x 3 heures + travail à la maison
 - Plate forme : Azure, Azure DevOps, Visual Studio Code et dotnet/react
 - Pas d'utilisation de Visual Studio (vous êtes des DevOps et l'entreprise ne paie pas de licence pour cela) : vous devez tout faire ne ligne de commande
 
