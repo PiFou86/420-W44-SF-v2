@@ -1,6 +1,6 @@
 # 420-W44-SF
 
-Commandes de bases à maitriser : https://github.com/PiFou86/420-W44-SF/blob/master/Aide-memoire.md
+Commandes de bases à maitriser : [Aide mémoire](Aide-memoire.md)
 
 Vidéo de certains cours : https://www.youtube.com/playlist?list=PL1Cc1A0PTWee3ok4KQz0umqsVngtlnSur
 
@@ -14,3 +14,5 @@ Jean-Pierre Duchesnau et Pierre-François Léon.
 - Été 2020 : Pierre-François Léon, les 16 derniers cours
 - Été 2021 : Jean-Pierre Duchesneau
 - Automne 2022 : Jean-Pierre Duchesneau & Pierre-François Léon
+- Hiver 2023 : Pierre-François Léon
+- Automne 2023 : Pierre-François Léon
