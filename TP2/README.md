@@ -111,10 +111,17 @@ Si vous avez des erreurs une fois l'application déployée, vous pouvez :
 
 - Sur le portail azure, alidez que vous avez bien créé un `App service` de type Linux
 - Dans votre pipeline de déploiement, validez que l'étape de déploiement de l'application Web est bien configurée pour `Linux` et non `Windows`
-- Validez votre chaine de connection en allant consulter le fichier appsettings à partir du portail Azure :
+- Valider votre chaine de connection en allant consulter le fichier appsettings à partir du portail Azure :
   - À partir de la ressource de l'application Web, allez dans le menu  `Outils de développement > Outils avancés` puis `accéder`
 - À partir du portail Azure, consultez le journal de votre application `Supervision > Flux de journaux`
 - À partir du portail Azure, vous pouvez aussi passer l'application en mode développement en ajoutant le paramètre `ASPNETCORE_ENVIRONMENT=Development` pour cela, allez dans le menu `Paramètres > Configuration` et ajoutez le paramètre d'application `ASPNETCORE_ENVIRONMENT` avec la valeur `Development`. Allez ensuite dans le menu `Vue d'ensemble` et arrêtez et démarrez l'application. Le site devrait alors afficher les exceptions.
+
+Le site n'accepte pas d'ajouter / afficher les clients, vous pouvez :
+
+- Valider le point précédent (BD créée et infrastructure déployée)
+- Valider que le schéma de la base de données à bien été migré (vous pouvez vous connecter dessus avec SSMS. N'oubliez pas d'activer l'accès public au serveur de bases de données à partir de votre IP.) :
+  - Avez-vous généré le fichier SQL idempotent à partir des outils d'entity framework ?
+  - Avez-vous exécuté le fichier SQL sur votre base de données
 
 ## Bugs Azure et contournements
 
