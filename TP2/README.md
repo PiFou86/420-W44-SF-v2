@@ -120,7 +120,7 @@ Le site n'accepte pas d'ajouter / afficher les clients, vous pouvez :
 
 - Valider le point précédent (BD créée et infrastructure déployée)
 - Valider que le schéma de la base de données à bien été migré (vous pouvez vous connecter dessus avec SSMS. N'oubliez pas d'activer l'accès public au serveur de bases de données à partir de votre IP.) :
-  - Avez-vous généré le fichier SQL idempotent à partir des outils d'entity framework ?
+  - Avez-vous généré le fichier SQL idempotent à partir des outils d'entity framework ? (Voir diapos du module sur le déploiement continu)
   - Avez-vous exécuté le fichier SQL sur votre base de données
 
 ## Bugs Azure et contournements
