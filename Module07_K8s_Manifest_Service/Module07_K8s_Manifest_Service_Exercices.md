@@ -27,7 +27,7 @@ Dans cet exercice, vous allez apprendre à créer un contexte afin de simplifier
 
 ## Exercice 3 - Créez plusieurs déploiements - Sélection
 
-Dans cet exercice, nous allons créer des déploiements quelquonques dont nous allons nous servir afin de tester les requêtes sur les labels (i.e. l'image et la fonctionnalité n'a pas d'importance ici !).
+Dans cet exercice, nous allons créer des déploiements quelconques dont nous allons nous servir afin de tester les requêtes sur les labels (i.e. l'image et la fonctionnalité n'a pas d'importance ici !).
 
 - Créez plusieurs déploiements avec les caractéristiques suivantes (un réplica) :
   - dep1.yaml :
