@@ -1,0 +1,46 @@
+apiVersion: apps/v1 
+kind: Deployment 
+metadata: 
+  name: demo-config-map 
+spec: 
+  replicas: 1 
+  selector: 
+    matchLabels: 
+      app: demo-config-map-app 
+  template: 
+    metadata: 
+      labels: 
+        app: demo-config-map-app 
+    spec: 
+      containers: 
+      - name: my-container
+        image: nginx
+        volumeMounts:
+        - name: fichier-config
+          mountPath: /var/demo 
+        - name: fichier-secret-config
+          mountPath: /var/demoSecret
+        env:
+          - name: MA_VAR
+            valueFrom:
+              configMapKeyRef:
+                name: config-map-cours-demo
+                key: ma_variable
+          - name: connectionString_Default
+            valueFrom:
+              secretKeyRef:
+                name: secret-cours-demo
+                key: connectionString_Default
+      volumes: 
+      - name: fichier-config
+        configMap:
+          name: config-map-cours-demo
+          items:
+          - key: monfichier.conf
+            path: monfichier.conf
+      - name: fichier-secret-config
+        secret:
+          secretName: secret-cours-demo
+          items:
+          - key: monfichierSecret.conf
+            path: monfichierSecret.conf

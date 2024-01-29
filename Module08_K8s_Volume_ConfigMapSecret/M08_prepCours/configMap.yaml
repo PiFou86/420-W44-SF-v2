@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: config-map-cours-demo
+data:
+  ma_variable: "Une valeur"
+
+  monfichier.conf: |
+    Une ligne
+    Une autre...
+    C'est un beau fichier de configuration !
