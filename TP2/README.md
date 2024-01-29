@@ -2,13 +2,13 @@
 
 ## Informations
 
-- Remise du travail: 26 avril 2023, 23:59
+- Remise du travail: 11 janvier 2024, 23:59
 - Ce travail est réalisé en équipe de 2 personnes et seuls les membres de cette équipe y contribuent
 - Toutes les réponses fournies doivent être originales (produites par l’étudiant ou un membre de l’équipe)
 - Toute copie de code, de portion de code, d’algorithme ou de texte doit faire mention de sa source
 - L’emprunt ou la copie de code ou de portions de code est interdite
 - Tout constat de plagiat, tricherie ou fraude sera automatiquement déclaré à la Direction et les sanctions prévues seront appliquées
-- Durée : 2 x 3 heures + travail à la maison
+- Durée : 3 x 3 heures + travail à la maison
 - Plate forme : Azure, Azure DevOps, Visual Studio Code et dotnet/react
 - Pas d'utilisation de Visual Studio (vous êtes des DevOps et l'entreprise ne paie pas de licence pour cela) : vous devez tout faire ne ligne de commande
 
@@ -85,7 +85,7 @@ Le premier pipeline doit déployer dans l'environnement de développement et le 
 
 Le pipeline dédié aux environnements de développement doit être déclenché automatiquement à chaque modification de la branche "develop". Le pipeline dédié aux environnements de développement et celui de production doit être déclenché manuellement à chaque modification de la branche "main".
 
-Le pipeline de déploiement dédié aux environnements de développement doit être déployé dans deux environnements de déploiement différents : "unitaire" et "fonctionnel". L'environnement "unitaire" doit être déployé dans un groupe de ressources différent de l'environnement "fonctionnel". L'environnement "fonctionnel" doit être déployé automatiquement en cas de réussite des précédents sur acceptation d'individus spécifiques. Pour le projet, ajouter un des binômes ainsi que mon compte (Voir les "gates").
+Le pipeline de déploiement dédié aux environnements de développement doit être déployé dans deux environnements de déploiement différents : "unitaire" et "fonctionnel". L'environnement "unitaire" doit être déployé dans un groupe de ressources différent de l'environnement "fonctionnel". L'environnement "fonctionnel" doit être déployé automatiquement en cas de réussite des précédents sur acceptation d'individus spécifiques. Pour le projet, ajouter un des binômes ainsi que mon compte.
 
 Le pipeline de déploiement dédié aux environnements de développement et celui de production doit être déployé dans trois environnements de déploiement : "unitaire", "fonctionnel" et "production". L'environnement "unitaire" doit être déployé dans un groupe de ressources différent de l'environnement "fonctionnel" et de l'environnement "production". L'environnement "fonctionnel" doit être déployé automatiquement en cas de réussite des précédents sur acceptation d'individus spécifiques. L'environnement "production" doit être déployé automatiquement en cas de réussite des précédents sur acceptation d'individus spécifiques. Pour le projet, ajouter un des binômes ainsi que mon compte (Voir les approbations).
 
@@ -111,10 +111,17 @@ Si vous avez des erreurs une fois l'application déployée, vous pouvez :
 
 - Sur le portail azure, alidez que vous avez bien créé un `App service` de type Linux
 - Dans votre pipeline de déploiement, validez que l'étape de déploiement de l'application Web est bien configurée pour `Linux` et non `Windows`
-- Validez votre chaine de connection en allant consulter le fichier appsettings à partir du portail Azure :
+- Valider votre chaine de connection en allant consulter le fichier appsettings à partir du portail Azure :
   - À partir de la ressource de l'application Web, allez dans le menu  `Outils de développement > Outils avancés` puis `accéder`
 - À partir du portail Azure, consultez le journal de votre application `Supervision > Flux de journaux`
 - À partir du portail Azure, vous pouvez aussi passer l'application en mode développement en ajoutant le paramètre `ASPNETCORE_ENVIRONMENT=Development` pour cela, allez dans le menu `Paramètres > Configuration` et ajoutez le paramètre d'application `ASPNETCORE_ENVIRONMENT` avec la valeur `Development`. Allez ensuite dans le menu `Vue d'ensemble` et arrêtez et démarrez l'application. Le site devrait alors afficher les exceptions.
+
+Le site n'accepte pas d'ajouter / afficher les clients, vous pouvez :
+
+- Valider le point précédent (BD créée et infrastructure déployée)
+- Valider que le schéma de la base de données à bien été migré (vous pouvez vous connecter dessus avec SSMS. N'oubliez pas d'activer l'accès public au serveur de bases de données à partir de votre IP.) :
+  - Avez-vous généré le fichier SQL idempotent à partir des outils d'entity framework ? (Voir diapos du module sur le déploiement continu)
+  - Avez-vous exécuté le fichier SQL sur votre base de données
 
 ## Bugs Azure et contournements
 

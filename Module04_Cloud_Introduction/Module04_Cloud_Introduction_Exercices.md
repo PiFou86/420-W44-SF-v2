@@ -123,7 +123,7 @@ Le but de cet exercice est de créer une VM Linux avec le port 80 ouvert. La pre
 - Choisissez votre abonnement, le groupe de ressources et le nom `M04-Ex04-T01` pour votre machine virtuelle
 - Choisissez la région `Canada East` (Prenez `Canada centre` si non disponible)
 - !!!Choisissez la taille de la machine virtuelle "Standard B1ls" qui est la plus petite machine virtuelle Linux!!!
-- Choisissez une image Linux de type `Ubuntu Server 18.04 LTS` ou supérieure
+- Choisissez une image Linux de type `Ubuntu Server 20.04 LTS` ou supérieure
 - Choisissez un nom d'utilisateur et un mot de passe
 - Autorisez le port 80 et le port 22
 - Dans l'onglet `Mis en réseau`, vérifiez que vous avez bien une adresse IP publique qui sera créée
@@ -222,7 +222,7 @@ Nous allons utiliser un niveau de calcul de type sans serveur (serverless) qui e
     - cours=420-W44-SF
     - module=M04
   - Créez le service
-- Ouvrez le service et vérifier que l'app web est bien en ligne en utilisant l'URL fournie par le portail Azure (Exemple : https://m04-ex05-t01-web-\<matricule>.azurewebsites.net)
+- Ouvrez le service et vérifier que l'app web est bien en ligne en utilisant l'URL fournie par le portail Azure (Exemple : `https://m04-ex05-t01-web-<matricule>.azurewebsites.net`)
 - Vous devriez voir une page web avec le texte "Your web app is running and waiting for your content"
 
 #### Tâche 3 - Nettoyage des ressources
@@ -247,7 +247,7 @@ Nous allons utiliser un niveau de calcul de type sans serveur (serverless) qui e
 `connexionString="Server=tcp:m04-ex06-t01-sql-<matricule>.database.windows.net,1433;Initial Catalog=M04-Ex06-T01-DB;Persist Security Info=False;User ID=adminuser;Password=Password123..;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"` et exécuté la ligne dans bash (vous pouvez l'adapter pour cmd ou powershell)
 - Ajoutez les chaines de connexion pour l'application avec les commandes suivantes : `az webapp config connection-string set --name "M04-Ex06-T02-Web-<matricule>" --resource-group "M04-Ex06-T01" --settings "CatalogConnection=$connexionString" --connection-string-type SQLServer` et `az webapp config connection-string set --name "M04-Ex06-T02-Web-<matricule>" --resource-group "M04-Ex06-T01" --settings "IdentityConnection=$connexionString" --connection-string-type SQLServer`
 - Reprenez la version compilée et publiée de eShopOnWeb : vous devriez avoir un fichier zip nommé "publishedArtifac.zip" dans le répertoire courant du dépôt.
-- Déployez l'application web à partir du répertoire "Exercice6" à partir de la ligne de commande suivante : `az webapp deployment source config-zip --src publishedArtifac.zip --resource-group M04-Ex06-T01 --name "M04-Ex06-T02-Web-<matricule>"` 
+- Déployez l'application web à partir du répertoire "Exercice6" à partir de la ligne de commande suivante : `az webapp deployment source config-zip --src publishedArtifact.zip --resource-group M04-Ex06-T01 --name "M04-Ex06-T02-Web-<matricule>"` 
 - Testez votre application web
 - En cas d'erreur :
   - Allez voir les logs de l'application web en vous rendant sur le portail Azure sur la ressource qui héberge votre site web / Flux de journal et observez l'erreur (La reproduire au besoin en rafaichissant la page)
@@ -303,6 +303,8 @@ using (var scope = app.Services.CreateScope())
     }
 }
 ```
+
+La version du code utilisée est disponible à l'adresse suivante : https://github.com/PiFou86/eShopOnWeb_net60
 
 </details>
 
