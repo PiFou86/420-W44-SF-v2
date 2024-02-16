@@ -14,7 +14,7 @@
 
 ## Objectifs
 
-- Faire un flux d'intégration continue (CI) avec Azure DevOps qui construit une image Docker et la publie sur Docker Hub à chaque commit sur la branche master
+- Faire un flux d'intégration continue (CI) avec Azure DevOps qui construit une image Docker et la publie sur Docker Hub ou Azure Container Registry à chaque commit sur la branche master
 - Effectuer le déploiement d'une base de données SQL Server dans un service SQL Database (Attention aux coûts ! Prenez la version la moins chère !)
 - Effectuer le déploiement d'une application web dans Kubernetes
 - Utiliser 3 environnements de déploiement (dev, test, prod) et faire une mise à l'échelle de l'application web dans au moins un environnement
