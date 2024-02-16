@@ -108,4 +108,4 @@ Tout partage de code, d'explication, de bouts de texte, etc. est considéré com
 
 ## Bonus
 
-- mise à l'échelle automatique 5%
+- mise à l'échelle automatique des pods (pas des noeuds !) 5%
