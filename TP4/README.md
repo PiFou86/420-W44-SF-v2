@@ -44,7 +44,7 @@ En résumé, ce qui est noté est ce qui est dans l'archive zip sur Léa à l'ex
 
 ## Projet
 
-Le projet est écrit en .Net 6.0. Il se trouve dans le répertoire ```src``` du TP précédent répertoire.
+Le projet est écrit en .Net 6.0. Il se trouve dans le répertoire ```src``` du TP précédent.
 
 Pour modifier la configuration de la chaîne de connexion et écraser les valeurs du fichier `appsettings.json`, vous pouvez utiliser les variables d'environnement. Par exemple, pour modifier la valeur de `ConnectionStrings.DefaultConnection` dans le fichier `appsettings.json`, vous pouvez utiliser la variable d'environnement `ConnectionStrings__DefaultConnection` : le point est remplacé par deux underscores.
 
