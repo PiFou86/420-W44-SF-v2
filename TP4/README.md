@@ -59,7 +59,7 @@ Vous devez créer une image Docker pour l'application Web (GC.WebReact). Vous de
 Vous devez créer un pipeline Azure DevOps qui :
 
 - Construit l'image Docker
-- Publie l'image sur Docker Hub
+- Publie l'image sur Docker Hub ou Azure Container Registry
 
 ## Étape 2 - Création du service SQL Database
 
