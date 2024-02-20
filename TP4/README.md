@@ -71,6 +71,8 @@ Vous devez créer un pipeline de type Release Azure DevOps qui :
 - Modifie les fichiers ARM pour ajouter les variables d'environnement
 - Effectue le déploiement du service SQL Database
 
+**N'oubliez pas, la création des tables est effectuée au démarrage de l'application Web : vous n'avez pas à me démontrer ici que vous savez extraire le fichier SQL à partir d'entity framework.**
+
 ## Étape 3 - Création du service Kubernetes
 
 Vous devez créer un service Kubernetes dans Azure. Le serveur doit être déployé à partir du pipeline de type Release Azure DevOps précédent.
@@ -83,7 +85,7 @@ Vous devez ajouter les tâches qui :
 
 ## Étape 4 - Déploiement de l'application Web dans Kubernetes
 
-Vous devez créer les fichiers YAML de déploiement pour déployer l'application Web (GC.WebReact) dans Kubernetes. Vous devez créer un fichier YAML pour chaque environnement de déploiement (unitaire, acceptation, production).
+Vous devez créer les fichiers YAML de déploiement pour déployer l'application Web (GC.WebReact) dans Kubernetes. Vous devez créer un/des fichiers YAML génériques utilisables sur tous les environnements de déploiement (unitaire, acceptation, production) en effectuant simplement des remplacmenets.
 
 Chaque environnement doit :
 
@@ -108,4 +110,4 @@ Tout partage de code, d'explication, de bouts de texte, etc. est considéré com
 
 ## Bonus
 
-- mise à l'échelle automatique des pods (pas des noeuds !) 5%
+- Mise à l'échelle automatique des pods (pas des noeuds !) 5%
