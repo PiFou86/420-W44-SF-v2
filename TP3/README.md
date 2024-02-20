@@ -84,6 +84,6 @@ Tout partage de code, d'explication, de bouts de texte, etc. est considéré com
 
 ## Bonus
 
-- Plus petit image docker de la cohorte 5%
-- Validation de la santé du conteneur 5%
-- Un seul ensemble de fichiers YAML pour tous les environnements 5%
+- Un seul ensemble de fichiers YAML pour tous les environnements (modèle de déploiement avec remplacement de noms automatiquement - i.e. script de transformation) 5%
+- Validation de la santé des conteneurs 5%
+- Image de moins de 90 Mo 5%
