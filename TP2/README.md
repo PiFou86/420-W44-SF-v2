@@ -1,4 +1,4 @@
-# Travail pratique 2 - Déploiement continue
+# Travail pratique 2 - Déploiement continu
 
 ## Informations
 
