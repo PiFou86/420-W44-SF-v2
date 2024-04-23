@@ -7,6 +7,55 @@ Ce module a pour but de vous faire explorer et découvrir Kubernetes.
 - Allez dans la configuration de Docker Desktop
 - Sélectionnez l'option kubernetes, cochez `Enable Kubernetes` et faites `Apply and restart`
 
+## Êtes-vous un vrai développeur avec son économie d'effort ?
+
+L'autocomplétion est d'une grande aide, vous ne pourrez pas tout retenir.
+
+### Si vous utilisez Bash
+
+Placez vous dans votre répertoire personnel avec la commande `cd`, puis exécutez la commande suivante :
+
+```bash
+echo "source <(kubectl completion bash)" >> ~/.bashrc # ajoute l'auto-complétion de manière permanente à votre shell bash
+```
+
+### Si vous utilisez PowerShell
+
+Merci à Samuel Renaud de la cohorte d'hiver 2024 pour son script. Pour l'utilisez, copier le texte dans un fichier nommé `install_autocompletion_kubectl` et exécutez le.
+
+```powershell
+# Vérifie si le fichier de profil PowerShell existe
+if (-Not (Test-Path $PROFILE)) {
+    # Crée le fichier de profil s'il n'existe pas
+    New-Item -Path $PROFILE -ItemType File
+    Write-Host "Fichier de profil créé à l'emplacement : $PROFILE"
+} else {
+    Write-Host "Fichier de profil existant détecté."
+}
+
+# Importe le module PSReadLine s'il n'est pas déjà chargé
+if (-Not (Get-Module -ListAvailable -Name PSReadLine)) {
+    Install-Module -Name PSReadLine -Scope CurrentUser -AllowClobber -Force
+    Import-Module PSReadLine
+    Write-Host "Module PSReadLine installé et chargé."
+} else {
+    Write-Host "Module PSReadLine déjà installé."
+}
+
+# Ajoute la complétion pour kubectl
+Set-PSReadLineKeyHandler -Key Tab -Function MenuComplete
+
+# Vérifie si la complétion pour kubectl est déjà dans le profil
+if (-Not (Select-String -Path $PROFILE -Pattern 'kubectlCompleterBlock' -Quiet)) {
+    kubectl completion powershell >> $PROFILE
+    Add-Content -Path $PROFILE -Value 'Set-Alias k kubectl'
+    Add-Content -Path $PROFILE -Value 'Register-ArgumentCompleter -CommandName ''k'' -ScriptBlock $__kubectlCompleterBlock'
+    Write-Host "Complétion pour kubectl ajoutée au fichier de profil."
+} else {
+    Write-Host "Complétion pour kubectl déjà configurée dans le profil."
+}
+```
+
 ## Exercice 1 - Exploration
 
 - Affichez les noeuds de votre cluster
