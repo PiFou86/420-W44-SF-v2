@@ -2,17 +2,7 @@
 
 Dans les exercices qui le permettent, assurez-vous de toujours indiquer un espace de nom qui correspond à votre numéro de matricule. Pour vous aider, ne sautez pas l'exercice 2.
 
-## Exercice 1 - Amélioration de votre bash (bash seulement)
-
-L'autocomplétion est d'une grande aide, vous ne pourrez pas tout retenir. Pour l'activer, vous devez ajouter la ligne suivante dans votre fichier `.bashrc` :
-
-```bash
-echo "source <(kubectl completion bash)" >> ~/.bashrc # ajoute l'auto-complétion de manière permanente à votre shell bash
-```
-
-(Source : https://kubernetes.io/fr/docs/reference/kubectl/cheatsheet/)
-
-## Exercice 2 - Modification du contexte
+## Exercice 1 - Modification du contexte
 
 Dans cet exercice, vous allez apprendre à créer un contexte afin de simplifier vos lignes de commande ou, pour les prochains modules, viser un autre serveur Kubernetes.
 
@@ -25,7 +15,7 @@ Dans cet exercice, vous allez apprendre à créer un contexte afin de simplifier
 - Créez un fichier manifeste afin de créer votre espace de noms et appliques le. Attention, étant donné que vous utilisez votre numéro de matricule comme nom, il faut le mettre entre guillemets sinon YAML va le prendre pour un entier et non une chaîne de caractères.
 - Validez que l'espace de noms existe bien
 
-## Exercice 3 - Créez plusieurs déploiements - Sélection
+## Exercice 2 - Créez plusieurs déploiements - Sélection
 
 Dans cet exercice, nous allons créer des déploiements quelconques dont nous allons nous servir afin de tester les requêtes sur les labels (i.e. l'image et la fonctionnalité n'a pas d'importance ici !).
 
@@ -74,7 +64,7 @@ Dans cet exercice, nous allons créer des déploiements quelconques dont nous al
     - tous les pods de l'environnement unit
 - Supprimez tous vos déploiements
 
-## Exercice 4 - Réplica
+## Exercice 3 - Réplica
 
 - Créez un déploiement avec les caractéristiques suivantes :
   - rep1.yaml :
@@ -95,7 +85,7 @@ Dans cet exercice, nous allons créer des déploiements quelconques dont nous al
 - Amusez vous à supprimer des pods pour voir ce qui se passe
 - **Ne supprimez pas le déploiement, nous allons l'utiliser dans l'exercice suivant**
 
-## Exercice 5 - Service
+## Exercice 4 - Service
 
 Dans cet exercice, nous allons créer un service qui va nous permettre d'accéder à nos réplicas.
 
@@ -116,6 +106,6 @@ watch -n 1 wget -qO - mon-site | grep -o -E '[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+'
 - À partir de votre VM, naviguez l'adresse IP suivie du port
 - Supprimez le déploiement et le service
 
-## Exercice 6 - Livre d'or
+## Exercice 5 - Livre d'or
 
 - Suivez les instructions du site https://kubernetes.io/docs/tutorials/stateless-application/guestbook/ afin de créer un livre d'or avec un site PHP et le serveur de cache redis
