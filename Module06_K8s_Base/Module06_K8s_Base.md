@@ -58,6 +58,10 @@ if (-Not (Select-String -Path $PROFILE -Pattern 'kubectlCompleterBlock' -Quiet))
 
 Crédit : Merci à Samuel Renaud de la cohorte d'hiver 2024 pour son script !
 
+### Vous êtes un rebel ?
+
+Voir la documentation pour les autres shell supportés : https://kubernetes.io/fr/docs/reference/kubectl/cheatsheet/
+
 ## Exercice 1 - Exploration
 
 - Affichez les noeuds de votre cluster
