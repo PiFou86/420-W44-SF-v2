@@ -21,7 +21,7 @@ echo "source <(kubectl completion bash)" >> ~/.bashrc # ajoute l'auto-complétio
 
 ### Si vous utilisez PowerShell
 
-Merci à Samuel Renaud de la cohorte d'hiver 2024 pour son script. Pour l'utilisez, copier le texte dans un fichier nommé `install_autocompletion_kubectl` et exécutez le.
+Pour l'utilisez, copier le texte dans un fichier nommé `install_autocompletion_kubectl` et exécutez le.
 
 ```powershell
 # Vérifie si le fichier de profil PowerShell existe
@@ -55,6 +55,8 @@ if (-Not (Select-String -Path $PROFILE -Pattern 'kubectlCompleterBlock' -Quiet))
     Write-Host "Complétion pour kubectl déjà configurée dans le profil."
 }
 ```
+
+Crédit : Merci à Samuel Renaud de la cohorte d'hiver 2024 pour son script !
 
 ## Exercice 1 - Exploration
 
