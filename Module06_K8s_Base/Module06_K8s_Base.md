@@ -45,8 +45,8 @@ Dans cet exercice, validez tout le temps que vous êtes bien dans le pod en list
   ```bash
   kubectl run monbash --image=busybox -it -- sh
   kubectl get pods -o wide
-  kubectl attach monbash-78c9b77fb9-wb27p -c monbash -i -t
-  kubectl exec monbash-78c9b77fb9-wb27p -it -- sh
+  kubectl attach monbash -c monbash -it
+  kubectl exec monbash -it -- sh
   ```
 
 </details>
