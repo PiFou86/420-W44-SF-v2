@@ -58,7 +58,7 @@ if (-Not (Select-String -Path $PROFILE -Pattern 'kubectlCompleterBlock' -Quiet))
 
 Crédit : Merci à Samuel Renaud de la cohorte d'hiver 2024 pour son script !
 
-### Vous êtes un rebel ?
+### Vous êtes un rebelle ?
 
 Voir la documentation pour les autres shell supportés : https://kubernetes.io/fr/docs/reference/kubectl/cheatsheet/
 
