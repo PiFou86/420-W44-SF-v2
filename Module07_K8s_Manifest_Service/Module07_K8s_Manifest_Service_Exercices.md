@@ -9,7 +9,7 @@ Dans cet exercice, vous allez apprendre à créer un contexte afin de simplifier
 !!! Si vous êtes sous windows, ne passez pas par le Ubuntu de Windows mais par powershell !!!
 
 - Faites une copie de sauvegarde de votre fichier `.kube/config`
-- Créez vous un contexte avec la commande `kubectl config set-context`, spécifiez un nom de namespace qui correspond à votre numéro de matricule, le cluster local et l'utilisateur que vous venez de spécifier (Voir démonstration)
+- Créez vous un contexte avec la commande `kubectl config set-context`, spécifiez un nom de namespace qui correspond à votre numéro de matricule, le cluster local et l'utilisateur que vous venez de spécifier (affichez votre configuration courante pour trouver le nom d'utilisateur et le nom du cluster : ils doivent exister)
 - Définissez votre nouveau context comme étant le contexte courant (use-context, voir démonstration)
 - Affichez les noeuds et les pods du cluster (tous les namespaces) et de votre namespace pour valider que tout fonctionne
 - Créez un fichier manifeste afin de créer votre espace de noms et appliques le. Attention, étant donné que vous utilisez votre numéro de matricule comme nom, il faut le mettre entre guillemets sinon YAML va le prendre pour un entier et non une chaîne de caractères.
