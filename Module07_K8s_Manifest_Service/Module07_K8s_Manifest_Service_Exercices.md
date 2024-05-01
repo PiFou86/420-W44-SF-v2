@@ -69,7 +69,7 @@ Dans cet exercice, nous allons créer des déploiements quelconques dont nous al
 - Créez un déploiement avec les caractéristiques suivantes :
   - rep1.yaml :
     - réplica : 1
-    - image : nginx-demos/hello
+    - image : nginxdemos/hello
     - labels :
       - tier : frontend
       - env : unit
