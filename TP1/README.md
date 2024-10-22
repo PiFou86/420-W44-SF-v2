@@ -2,7 +2,7 @@
 
 ## Informations
 
-- Remise du travail: jeudi 14 mars 2024, 23:59
+- Remise du travail: mercredi 30 octobre 2024, 23:59
 - Ce travail est réalisé en équipe de 2 personnes et seuls les membres de cette équipe y contribuent
 - Toutes les réponses fournies doivent être originales (produites par l’étudiant ou un membre de l’équipe)
 - Toute copie de code, de portion de code, d’algorithme ou de texte doit faire mention de sa source
@@ -35,7 +35,7 @@
 - Fichier YAML (pipeline YAML) (15 points)
 - Liste des commandes de compilation, ajout de projets / package NuGet (10 points)
 - Répartition des tâches entre partenaires avec nombre d'heures (5 points)
-- Ajoutez `pfleon@csfoy.ca` comme utilisateur et administrateur avec une licence de type Basic (Le faire au niveau de l'organisation) (-10 points si je dois courir après vous)
+- Ajoutez `rparadis@csfoy.ca` comme utilisateur et administrateur avec une licence de type Basic (Le faire au niveau de l'organisation) (-10 points si je dois courir après vous)
 - Répondre aux questions suivantes (15 points):
   - Quelles sont les technologies utilisées (Langages, versions de bibliothèques, versions de logiciels, services utilisées) ?
   - En quoi l'utilisation des outils tels qu'Azure DevOps permet d'améliorer la traçabilité ? (Ne pas oublier de décrire ce qu'est la traçabilité)
