@@ -6,7 +6,7 @@ Vidéo de certains cours : https://www.youtube.com/playlist?list=PL1Cc1A0PTWee3o
 
 ## Auteurs
 
-Jean-Pierre Duchesnau et Pierre-François Léon.
+Jean-Pierre Duchesnau, Pierre-François Léon et Raphaël Paradis.
 
 ## Version
 
@@ -16,3 +16,4 @@ Jean-Pierre Duchesnau et Pierre-François Léon.
 - Automne 2022 : Jean-Pierre Duchesneau & Pierre-François Léon
 - Hiver 2023 : Pierre-François Léon
 - Automne 2023 : Pierre-François Léon
+- Automne 2024 : Raphaël Paradis
