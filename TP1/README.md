@@ -59,7 +59,7 @@ Vous devez mettre le projet sous contrôle de source et mettre en place des pipe
 
 - Vous devez créer un nouveau projet d'équipe et y ajouter le code du projet dans le dépôt par défaut dans la branche "main" (n'oubliez pas le .gitignore !)
 - Vous devez créer une branche "develop"
-- Vous devez créer un pipeline classic d'intégration continue qui construit 3 artefacts (donc 3 "Azure publish" et non 1 comme dans les exercices) : un pour l'interface utilisateur (GC.ConsoleUI) et un par traitement lot (GC.Batch.ModifierNomPrenomPremiereLettreMajuscules et GC.Batch.ModifierPaysMajusculesClients)
+- Vous devez créer un pipeline classic d'intégration continue qui construit 3 artefacts (donc 3 ".net publish" et non 1 comme dans les exercices) : un pour l'interface utilisateur (GC.ConsoleUI) et un par traitement lot (GC.Batch.ModifierNomPrenomPremiereLettreMajuscules et GC.Batch.ModifierPaysMajusculesClients)
 - Reproduire une nouvelle version de ce pipeline avec des fichiers de description YAML
 - Les pipelines doivent se déclencher automatiquement à chaque modification des branches "main" et "develop"
 
