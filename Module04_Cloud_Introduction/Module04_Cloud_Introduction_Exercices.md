@@ -12,8 +12,8 @@
 
 - Vérifier que vous avez un compte Azure
   - Connectez-vous à https://portal.azure.com
-  - Sur votre cahier de laboratoire, notez le nom de votre abonnement
-- Si vous n'avez pas de compte Azure, vous pouvez en créer un gratuitement (si crédit non utilisé) :
+  - Sur votre « cahier de laboratoire » (ou garder vos résultats dans un fichier texte si vous n'avez pas de cahier), notez le nom de votre abonnement
+- Si vous n'avez pas de compte Azure (c'est probable que ce ne soit pas le cas : votre compte Microsoft d'école n'est pas un compte Azure en soi), vous pouvez en créer un gratuitement (si crédit non utilisé) :
   - https://azure.microsoft.com/fr-ca/free/students/
 - Pour accéder au menu étudiant à partir du portail, simplement se rendre sur le service Azure "Education".
 
@@ -29,7 +29,7 @@
   - Notez le nom de votre abonnement
   - Exécutez la commande `az account set --subscription "Nom de votre abonnement"`
   - Exécutez la commande `az account show`
-  - Notez le nom de votre abonnement sur votre cahier de laboratoire et valider que c'est le même que celui de la tâche précédente
+  - Notez le nom de votre abonnement et valider que c'est le même que celui de la tâche précédente
 
 ## Exercice 2 - Découverte du portail Azure
 
@@ -55,13 +55,14 @@
 
 - Ouvrez le Cloud Shell
   - Cliquez sur le bouton `Cloud Shell` (en haut à droite) (Vous pouvez aussi utiliser l'URI https://shell.azure.com/)
-  - Choisissez `Bash` (en haut à droite)
-  - Si vous n'avez pas de Cloud Shell, cliquez sur `Créer un Cloud Shell`
-    - Cliquez sur "Afficher les paramètres avancés". Autrement, un nouveau compte de stockage sera créé. Sélectionnez&nbsp;:
-      - Votre bonne région
-      - Votre groupe de ressources (`general-rg`)
-      - Votre compte de stockage (`generaldfccsfoy<matricule>sa`)
-      - Créez un partage de fichier (`partagegeneral`)
+  - Si vous avez un Cloud Shell qui s'ouvre par défaut, il ne sera pas relié à la ressource que vous venez de créer. Pour y arriver, vous devrez supprimer (unmount) le stockage actuel avec la commande PowerShell (vous devrez probablement faire le « switch ») : `Dismount-CloudDrive`.
+  - Après avoir confirmé, fermez votre Cloud Shell et ouvrez-en un nouveau.
+  - Choisissez `Bash`
+  - Dans la fenêtre de création du Cloud Shell, sélectionnez `Monter un stockage existant`, puis sélectionnez (dans la fenêtre suivante)&nbsp;:
+    - Votre bonne région
+    - Votre groupe de ressources (`general-rg`)
+    - Votre compte de stockage (`generaldfccsfoy<matricule>sa`)
+    - Créez un partage de fichier (`partagegeneral`)
   - Une fois le Cloud Shell ouvert, exécutez la commande `az account show`
   - Notez le nom de votre abonnement sur votre cahier de laboratoire et valider que c'est le même que celui de la tâche précédente
 - Allez dans le dossier `~/clouddrive`
