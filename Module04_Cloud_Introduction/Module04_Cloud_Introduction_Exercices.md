@@ -234,7 +234,7 @@ Nous allons utiliser un niveau de calcul de type sans serveur (serverless) qui e
 
 ### Tâche 1 - Création d'une instance de base de données à partir de la ligne de commande
 
-- Créez un nouveau groupe de ressources. Utilisez la commande précédente pour créer un nouveau groupe de ressources nommé "M04-Ex05-T02", utilisez la ligne de commande `az group create --name M04-Ex06-T01 --location canadacentral --tags "cohorte=<NumeroCohorte(ex:4394)>" "session=<Session(ex:H23)>" "cours=420-W44-SF" "module=M04"`
+- Créez un nouveau groupe de ressources. Utilisez la commande précédente pour créer un nouveau groupe de ressources nommé "M04-Ex06-T01", utilisez la ligne de commande `az group create --name M04-Ex06-T01 --location canadacentral --tags "cohorte=<NumeroCohorte(ex:4394)>" "session=<Session(ex:H23)>" "cours=420-W44-SF" "module=M04"`
 - Utilisez la commande `az sql server create --resource-group "M04-Ex06-T01" --name "M04-Ex06-T01-SQL-<matricle>" --location "canadacentral" --admin-user "adminuser" --admin-password "Password123.." --enable-public-network true` pour créer un serveur de bases de données.
 - Créez une base de données en utilisant la commande `az sql db create     --resource-group "M04-Ex06-T01" --server "M04-Ex06-T01-SQL-<matricule>" --name "M04-Ex06-T01-DB" --edition "GeneralPurpose" --compute-model "Serverless" --family "Gen5" --capacity 1 --max-size 5GB`
 
