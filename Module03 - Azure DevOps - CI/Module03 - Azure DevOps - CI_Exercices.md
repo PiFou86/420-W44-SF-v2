@@ -29,7 +29,7 @@
 
 ### Testez la solution localement
 
-- Naviguez le répertoire « src/Web »
+- Allez au répertoire « src/Web »
 - Exécutez le projet
   - Si vous avez un problème de bases de données, vous pouvez éditer le fichier « appsettings.Development.json » et ajouter la clef « UseOnlyInMemoryDatabase » avec la valeur « true » : la base de données sera alors en mémoire
 - Lancez votre navigateur Web afin de valider que le site fonctionne correctement
@@ -38,7 +38,7 @@
 
 Étapes :
 
-- Naviguez le répertoire racine de votre dépôt
+- Allez à la racine du répertoire de votre dépôt
 - Débutez par la restauration des packages Nuget : ici vous devrez spécifier le nom de votre solution en arguments. Vous devrez aussi le faire dans les commandes suivantes
 - Lancez la compilation de la solution avec la configuration « Release »
 - Lancez les tests unitaires avec la configuration « Release »
