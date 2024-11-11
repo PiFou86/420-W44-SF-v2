@@ -115,7 +115,7 @@ Le pipeline doit créer les artéfacts nécessaires à la publication d’eShopO
 - Créez les quatre tâches suivantes : restauration de packages, compilation, tests et publication en utilisant la commande « dotnet » :
   - Pour cela, ajoutez une tâche avec la bonne commande
   - Cliquez sur « .NET Core »
-  - Choisissez la commande adéquate (restore / build / pusblish)
+  - Choisissez la commande adéquate (restore / build / publish)
   - Ajoutez les arguments nécessaires en utilisant des références aux variables
 - Ajoutez la tâche de publication des artéfacts : l’artefact doit contenir le résultat de la publication
 - Sauvegardez vos modifications et lancez manuellement une intégration pour valider le tout
