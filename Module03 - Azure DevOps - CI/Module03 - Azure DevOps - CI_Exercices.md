@@ -127,7 +127,7 @@ Le pipeline doit créer les artéfacts nécessaires à la publication d’eShopO
 - Validez que la métrique est maintenant présente
 
 <details>
-    <summary>Solultion YAML</summary>
+    <summary>Solution YAML</summary>
 
 ```yaml
 trigger:
