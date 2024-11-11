@@ -2,7 +2,7 @@
 
 ## Informations
 
-- Remise du travail: jeudi 11 avril 2024, 23:59
+- Remise du travail: jeudi 28 novembre 2024, 23:59
 - Ce travail est réalisé en équipe de 2 personnes et seuls les membres de cette équipe y contribuent
 - Toutes les réponses fournies doivent être originales (produites par l’étudiant ou un membre de l’équipe)
 - Toute copie de code, de portion de code, d’algorithme ou de texte doit faire mention de sa source
@@ -34,7 +34,7 @@
   - Variables
   - L'ordre logique des images est indiqué par le tri des noms de fichier par ordre lexicographique ou les copies d'écran sont dans un fichier Word ou PDF
 - Répartition des tâches entre partenaires avec nombre d'heures par partenaire et total (5 points)
-- Ajoutez `pfleon@csfoy.ca` comme utilisateur et administrateur avec une licence de type Basic (Le faire au niveau de l'organisation) (-10 points si je dois courir après vous)
+- Ajoutez `rparadiscsfoy` comme utilisateur et administrateur avec une licence de type Basic (Le faire au niveau de l'organisation) (-10 points si je dois courir après vous) (ça devrait être déjà fait à moins que vous ayez une nouvelle organisation)
 - Répondre aux questions suivantes (15 points):
   - En quoi l'utilisation des outils DevOps permet une bonne compréhension entre les équipes et une diminution des risques lors du déploiement ?
   - En quoi est-il plus approprié d'utiliser un service PaaS pour la base de données et l'application Web plutôt que des services de VM ? (Comparez le coût des ressources et essayez d'évaluer les avantages inconvénients du PaaS vs IaaS dans notre situation)
@@ -56,7 +56,7 @@ Vous devez mettre le projet sous contrôle de source et mettre en place des pipe
 
 - Vous devez créer un nouveau projet d'équipe et y ajouter le code du projet dans le dépôt par défaut dans la branche "main" (n'oubliez pas le .gitignore !)
 - Vous devez créer une branche "develop"
-- Vous devez créer un pipeline classic ou YAML d'intégration continue qui construit 4 artefacts (donc 4 "Azure publish" et non 1 comme dans les exercices) : un pour l'interface utilisateur (GC.ConsoleUI), un par traitement lot (GC.Batch.ModifierNomPrenomPremiereLettreMajuscules et GC.Batch.ModifierPaysMajusculesClients) et un pour le projet Web (GC.WebReact)
+- Vous devez créer un pipeline classic ou YAML d'intégration continue qui construit 4 artefacts (donc 4 "dotnet publish" et non 1 comme dans les exercices) : un pour l'interface utilisateur (GC.ConsoleUI), un par traitement lot (GC.Batch.ModifierNomPrenomPremiereLettreMajuscules et GC.Batch.ModifierPaysMajusculesClients) et un pour le projet Web (GC.WebReact)
 - Les pipelines doivent se déclencher automatiquement à chaque modification des branches "main" et "develop"
 
 ## Étape 2 - Création des ressources Azure
