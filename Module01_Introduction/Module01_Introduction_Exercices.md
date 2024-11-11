@@ -40,7 +40,7 @@ Dans cette partie, vous allez cloner un dépôt Git, créer une branche et dépo
 
 - Faites un fork du dépôt suivant : [https://github.com/PiFou86/420-W44-SF-Module01](https://github.com/PiFou86/420-W44-SF-Module01)
 - Clonez localement votre dépôt à l'aide de Visual Studio Code.
-- **Attentions, faites des commits à toutes les étapes avec des messages significatifs.**
+- **Attention, faites des commits à toutes les étapes avec des messages significatifs.**
 - Ajouter une branche MaBranche_[VosInitiales] pour ce faire cliquer sur la branche dans la barre en bas.
 ![Branche](img/brancheVScode.jpg)
 - Cliquez sur créer branche dans la barre du haut
