@@ -34,7 +34,7 @@ Pour vous aider, vous pouvez utiliser le PDF que vous allez trouver à la racine
 - Créez un "Release Pipeline" nommé "eShopOnWeb-Release"
 - Ajoutez l'artefact "IaC" qui a été créé dans le pipeline d'intégration continu
 - Créez un environnement de déploiement nommé "Dev". Ici un environnement sera représenté par un "stage" dans le pipeline de déploiement
-- Ajoutez une tâches de type "ARM Template Deployment" dans le stage "Dev"
+- Ajoutez une tâche de type "ARM Template Deployment" dans le stage "Dev"
 - Testez votre pipeline de déploiement et vérifiez que les ressources sont bien créées dans votre souscription Azure
 
 ### Tâche 4 - Ajouter une étape de déploiement de l'application
