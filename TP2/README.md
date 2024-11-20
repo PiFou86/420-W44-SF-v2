@@ -33,7 +33,7 @@
   - Paramètres de chaque tâche
   - Variables
   - L'ordre logique des images est indiqué par le tri des noms de fichier par ordre lexicographique ou les copies d'écran sont dans un fichier Word ou PDF
-- Répartition des tâches entre partenaires avec nombre d'heures par partenaire et total (5 points)
+- Fichier texte contenant la répartition des tâches entre partenaires avec nombre d'heures par partenaire et total (5 points)
 - Ajoutez `rparadiscsfoy` comme utilisateur et administrateur avec une licence de type Basic (Le faire au niveau de l'organisation) (-10 points si je dois courir après vous) (ça devrait être déjà fait à moins que vous ayez une nouvelle organisation)
 - Répondre aux questions suivantes (15 points):
   - En quoi l'utilisation des outils DevOps permet une bonne compréhension entre les équipes et une diminution des risques lors du déploiement ?
@@ -57,7 +57,7 @@ Vous devez mettre le projet sous contrôle de source et mettre en place des pipe
 - Vous devez créer un nouveau projet d'équipe et y ajouter le code du projet dans le dépôt par défaut dans la branche "main" (n'oubliez pas le .gitignore !)
 - Vous devez créer une branche "develop"
 - Vous devez créer un pipeline classic ou YAML d'intégration continue qui construit 4 artefacts (donc 4 "dotnet publish" et non 1 comme dans les exercices) : un pour l'interface utilisateur (GC.ConsoleUI), un par traitement lot (GC.Batch.ModifierNomPrenomPremiereLettreMajuscules et GC.Batch.ModifierPaysMajusculesClients) et un pour le projet Web (GC.WebReact)
-- Les pipelines doivent se déclencher automatiquement à chaque modification des branches "main" et "develop"
+- Le pipeline doit se déclencher automatiquement à chaque modification des branches "main" et "develop"
 
 ## Étape 2 - Création des ressources Azure
 
