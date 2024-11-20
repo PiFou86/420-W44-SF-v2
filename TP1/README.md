@@ -34,7 +34,7 @@
   - L'ordre logique des images est indiqué par le tri des noms de fichier par ordre lexicographique ou les copies d'écran sont dans un fichier Word ou PDF
 - Fichier YAML (pipeline YAML) (15 points)
 - Liste des commandes de compilation, ajout de projets / package NuGet (10 points)
-- Répartition des tâches entre partenaires avec nombre d'heures (5 points)
+- Fichier contenant la répartition des tâches entre partenaires avec nombre d'heures (5 points)
 - Ajoutez `rparadis@csfoy.ca` comme utilisateur et administrateur avec une licence de type Basic (Le faire au niveau de l'organisation) (-10 points si je dois courir après vous)
 - Répondre aux questions suivantes (15 points):
   - Quelles sont les technologies utilisées (Langages, versions de bibliothèques, versions de logiciels, services utilisées) ?
