@@ -20,7 +20,7 @@ Pour vous aider, vous pouvez utiliser le PDF que vous allez trouver à la racine
 
 ### Tâche 2 - Préparation du dépôt Git et d'un pipeline pour l'IaC
 
-- À partir site web de Azure DevOps, retourner dans le projet d'équipe que vous aviez utilisé dans le module 3 pour l'application eShopOnWeb
+- À partir du site web de Azure DevOps, retourner dans le projet d'équipe que vous aviez utilisé dans le module 3 pour l'application eShopOnWeb
 - Modifiez le code source de l'application pour intégrer la création de la BD au démarrage de l'application (Pour simplifier la migration) et envoyez le code source dans votre dépôt Git (Voir le module précédent)
 - À partir du portail Azure DevOps, créez un nouveau dépôt Git nommé "eShopOnWeb-IaC"
 - Clonez le dépôt Git sur votre machine
