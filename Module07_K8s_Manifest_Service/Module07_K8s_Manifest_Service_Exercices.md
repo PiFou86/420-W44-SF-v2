@@ -19,7 +19,7 @@ Dans cet exercice, vous allez apprendre à créer un contexte afin de simplifier
 
 Dans cet exercice, nous allons créer des déploiements quelconques dont nous allons nous servir afin de tester les requêtes sur les labels (i.e. l'image et la fonctionnalité n'a pas d'importance ici !).
 
-- Créez plusieurs déploiements avec les caractéristiques suivantes (un réplica) :
+- Créez plusieurs déploiements avec les caractéristiques suivantes (un replica) :
   - dep1.yaml :
     - image : `nginxdemos/hello`
     - replica : 1
@@ -64,22 +64,22 @@ Dans cet exercice, nous allons créer des déploiements quelconques dont nous al
     - tous les pods de l'environnement unit
 - Supprimez tous vos déploiements
 
-## Exercice 3 - Réplica
+## Exercice 3 - Replica
 
 - Créez un déploiement avec les caractéristiques suivantes :
   - rep1.yaml :
-    - réplica : 1
+    - replica : 1
     - image : nginxdemos/hello
     - labels :
       - tier : frontend
       - env : unit
-- Affichez les pods, vous devriez voir un seul réplica de votre pod
+- Affichez les pods, vous devriez voir un seul replica de votre pod
 - Rentrez en mode intéractif dans un nouveau pod qui vous permet de faire des lignes de commandes comme l'image busybox.
 - Avec wget / curl, affichez la page web de votre précédent déploiement avec l'adresse IP du pod
 - À partir d'une autre fenêtre de commande, supprimez le pod (pas le déploiement !) qui contient votre nginx-demos/hello.
 - Listez les pods et regardez ce qui se passe
 - À partir de la précédente fenêtre faites de nouveau des requêtes au service web. Que s'est-il passé ? (une différence dans l'adresse IP ?)
-- Faites une mise à l'échelle (scale) pour passer d'un réplica à 10.
+- Faites une mise à l'échelle (scale) pour passer d'un replica à 10.
 - Affichez les pods avec une vue enrichie (wide)
 - Dans le pod qui contient votre shell, essayez différentes adresses
 - Amusez vous à supprimer des pods pour voir ce qui se passe
@@ -87,9 +87,9 @@ Dans cet exercice, nous allons créer des déploiements quelconques dont nous al
 
 ## Exercice 4 - Service
 
-Dans cet exercice, nous allons créer un service qui va nous permettre d'accéder à nos réplicas.
+Dans cet exercice, nous allons créer un service qui va nous permettre d'accéder à nos replicas.
 
-- Créez le déploiement d'un service qui vous permet d'accéder à vos 10 réplica :
+- Créez le déploiement d'un service qui vous permet d'accéder à vos 10 replica :
   - service :
     - nom : mon-site
     - port : 80
