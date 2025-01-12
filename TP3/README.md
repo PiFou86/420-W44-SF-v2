@@ -2,7 +2,7 @@
 
 ## Informations
 
-- Remise du travail: jeudi 23 mai 2024, 23:59
+- Remise du travail: jeudi 23 janvier 2025, 23:59
 - Ce travail est réalisé en équipe de 2 personnes et seuls les membres de cette équipe y contribuent
 - Toutes les réponses fournies doivent être originales (produites par l’étudiant ou un membre de l’équipe)
 - Toute copie de code, de portion de code, d’algorithme ou de texte doit faire mention de sa source
