@@ -18,6 +18,7 @@ Pour créer votre premier cluster AKS, vous pouvez passer par le portail Azure.
   - Version de Kubernetes : choisissez `1.30.7` (ou celle par défaut si vous ne trouvez pas la version demandée)
   - AKS pricing tier : choisissez `Free`
   - Automatic upgrade : choisissez `Disabled`
+  - Les options suivantes se trouveront dans votre `Node Pool` par défaut : 
   - Taille de noeud : choisissez `B2s`
   - Méthode de mise à l'échelle : choisissez `Manuelle`
   - Nombre de noeuds : choisissez `1`
