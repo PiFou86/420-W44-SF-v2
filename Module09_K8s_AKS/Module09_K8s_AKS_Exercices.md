@@ -15,7 +15,7 @@ Pour créer votre premier cluster AKS, vous pouvez passer par le portail Azure.
   - Nom du cluster Kubernetes : Donnez le nom `M09_AKS_Cluster`
   - Région : choisissez `Canada Central`
   - Zone de disponibilité : choisissez `Aucune`
-  - Version de Kubernetes : choisissez `1.25.5`
+  - Version de Kubernetes : choisissez `1.30.7` (ou celle par défaut si vous ne trouvez pas la version demandée)
   - AKS pricing tier : choisissez `Free`
   - Automatic upgrade : choisissez `Disabled`
   - Taille de noeud : choisissez `B2s`
