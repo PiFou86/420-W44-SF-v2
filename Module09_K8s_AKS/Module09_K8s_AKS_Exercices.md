@@ -143,6 +143,9 @@ spec:
                 number: 80
 ```
 
+- Consultez les ressources suivantes pour activer le HTTP routing :
+  - https://learn.microsoft.com/en-us/azure/aks/app-routing-migration
+  - https://learn.microsoft.com/en-us/azure/aks/app-routing
 - Remplacez `<Votre_Zone_DNS>` par la zone DNS de votre ressource `MC_M09_AKS_RG_M09_AKS_Cluster_canadacentral`
 - Appliquez la définition de l'ingress avec la commande
 
