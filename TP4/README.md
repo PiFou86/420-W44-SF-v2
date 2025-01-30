@@ -2,7 +2,7 @@
 
 ## Informations
 
-- Remise du travail: mardi 11 juin 2024, 23:59
+- Remise du travail: jeudi 13 février 2024, 23:59
 - Ce travail est réalisé en équipe de 2 personnes et seuls les membres de cette équipe y contribuent
 - Toutes les réponses fournies doivent être originales (produites par l’étudiant ou un membre de l’équipe)
 - Toute copie de code, de portion de code, d’algorithme ou de texte doit faire mention de sa source
@@ -103,6 +103,9 @@ Chaque environnement doit :
 ## Informations supplémentaires
   
 - Pour forcer le port d'exposition du site web, vous pouvez utiliser la variable d'environnement `ASPNETCORE_URLS`. Voici un exemple de valeur pour exposer le site sur le port 5000 : `ASPNETCORE_URLS=http://+:5000`
+- Pour générer votre Zone DNS avec la nouvelle version du Networking d'Azure :
+  `az aks show -g <Votre groupe de ressources> -n <Votre cluster> --query addonProfiles.httpApplicationRouting.config.HTTPApplicationRoutingZoneName -o tsv`
+  `az aks enable-addons -g <Votre groupe de ressources> -n <Votre cluster> -a http_application_routing`
 - Vous pouvez allez chercher la zone DNS en ligne de commande avec la commande `az network dns zone list`
 - Vous pouvez définir une variable de pipeline à partir d'un script : [https://learn.microsoft.com/en-us/azure/devops/pipelines/process/set-variables-scripts?view=azure-devops&tabs=bash](https://learn.microsoft.com/en-us/azure/devops/pipelines/process/set-variables-scripts?view=azure-devops&tabs=bash)
 
