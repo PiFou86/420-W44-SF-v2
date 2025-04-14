@@ -36,7 +36,7 @@ git config --global --list
 
 ## Partie 2 : Premières commandes Git
 
-Dans cette partie, vous allez cloner un dépôt Git, créer une branche et déposer cette branche sur le dépôt distant. Au prochain cours nous allons voir la théorie sûre comment travailler avec les branches.
+Dans cette partie, vous allez cloner un dépôt Git, créer une branche et déposer cette branche sur le dépôt distant. Au prochain cours nous allons voir la théorie sur comment travailler avec les branches.
 
 - Faites un fork du dépôt suivant : [https://github.com/PiFou86/420-W44-SF-Module01](https://github.com/PiFou86/420-W44-SF-Module01)
 - Clonez localement votre dépôt à l'aide de Visual Studio Code.
