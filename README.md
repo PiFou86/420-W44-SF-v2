@@ -17,3 +17,4 @@ Jean-Pierre Duchesnau, Pierre-François Léon et Raphaël Paradis.
 - Hiver 2023 : Pierre-François Léon
 - Automne 2023 : Pierre-François Léon
 - Automne 2024 : Raphaël Paradis
+- Hiver 2025 : Raphaël Paradis
