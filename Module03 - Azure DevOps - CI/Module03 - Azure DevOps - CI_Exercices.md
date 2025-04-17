@@ -23,7 +23,7 @@
   - git commit -m "version initiale"
 - Dans votre organisation Azure DevOps, créez un projet d’équipe nommé « eShopOnWeb »
 - Poussez le code de votre poste de développement vers le dépôt du projet Azure DevOps
-  - Suivez les indications fournies dans la page d’accueil du dépôt par dépôt du projet. Les commandes sont :
+  - Suivez les indications fournies dans la page d’accueil du code du projet (l'icône rouge dans le menu à gauche). Les commandes sont :
   - git remote add origin https://<login>@dev.azure.com/<organisation>/<projet>/_git/<nomDepot>
   - git push -u origin --all
 
