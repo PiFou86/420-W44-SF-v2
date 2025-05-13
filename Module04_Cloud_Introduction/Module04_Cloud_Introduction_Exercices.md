@@ -304,10 +304,12 @@ using (var scope = app.Services.CreateScope())
     }
 }
 ```
+</details>
+
 
 La version du code utilisée est disponible à l'adresse suivante : https://github.com/PiFou86/eShopOnWeb_net60
 
-</details>
+Si la version en dotnet 6.0 ne fonctionne pas, vous pouvez essayer d'adapter celle-ci : https://github.com/dotnet/eShop/tree/release/8.0
 
 ### Tâche 3 - Nettoyage
 
