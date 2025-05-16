@@ -39,7 +39,7 @@ Pour vous aider, vous pouvez utiliser le PDF que vous allez trouver à la racine
 
 ### Tâche 4 - Ajouter une étape de déploiement de l'application
 
-- Modifiez le pipeline de déploiement pour ajouter une étape de déploiement de l'application :
+- Modifiez le pipeline de déploiement (CD dans l'onglet Release) pour ajouter une étape de déploiement de l'application :
   - Ajoutez l'artefact "eShopOnWeb" qui a été créé dans le pipeline d'intégration continu
   - En début de pipeline, ajoutez une tâche de type "File transform" pour modifier le fichier "appsettings.json" pour qu'il contienne la bonne chaîne de connexion à la base de données
   - À la suite de la tâche de déploiement du fichier ARM, ajoutez une tâche de type "Azure App Service Deploy" dans le stage "Dev" et configurez le pour qu'il déploie l'application sur l'application web
