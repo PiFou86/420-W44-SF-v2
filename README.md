@@ -18,3 +18,8 @@ Jean-Pierre Duchesnau, Pierre-François Léon et Raphaël Paradis.
 - Automne 2023 : Pierre-François Léon
 - Automne 2024 : Raphaël Paradis
 - Hiver 2025 : Raphaël Paradis
+
+
+Les documents présents dans ce dépôt peuvent être utilisés pour un usage personnel non commecial.
+
+Toute utilisation commerciale, ceci inclus l'usage pédagogique, doit être réalisé avec l'accord de l'auteur principal et doit être renouvelé à chaque itération du cours. Ce droit n'est pas transférable.
