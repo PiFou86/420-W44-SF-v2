@@ -19,6 +19,13 @@ Jean-Pierre Duchesnau, Pierre-François Léon et Raphaël Paradis.
 - Automne 2024 : Raphaël Paradis
 - Hiver 2025 : Raphaël Paradis
 
+## Configuration de Visual Studio
+
+Sauf avis contraire, l'utilisation d'IA n'est pas autorisée pour les évaluations et est fortement déconseillée pour la réalisation des exercices.
+
+Voici une procédure minimale à exécuter pour le cours : https://github.com/PiFou86/420-WXX-SF-Configuration-VisualStudio/tree/main
+
+## Copyright
 
 Les documents présents dans ce dépôt peuvent être utilisés pour un usage personnel non commecial.
 
