@@ -2,8 +2,8 @@
 
 ## Informations
 
-- Remise du travail: jeudi 13 février 2024, 23:59
-- Ce travail est réalisé en équipe de 2 personnes et seuls les membres de cette équipe y contribuent
+- Remise du travail: jeudi 21 août 2025, 23:59
+- Ce travail est réalisé en équipe de 2 (ou 3 max avec l'approbation du professeur) personnes et seuls les membres de cette équipe y contribuent
 - Toutes les réponses fournies doivent être originales (produites par l’étudiant ou un membre de l’équipe)
 - Toute copie de code, de portion de code, d’algorithme ou de texte doit faire mention de sa source
 - L’emprunt ou la copie de code ou de portions de code est interdite
