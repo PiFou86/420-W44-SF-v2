@@ -2,8 +2,8 @@
 
 ## Informations
 
-- Remise du travail: mercredi 7 mai 2025, 23:59
-- Ce travail est réalisé en équipe de 2 personnes et seuls les membres de cette équipe y contribuent
+- Remise du travail: mercredi 26 novembre 2025, 23:59
+- Ce travail est réalisé en équipe de 2 personnes (ou 3 personnes avec accord du professeur) et seuls les membres de cette équipe y contribuent
 - Toutes les réponses fournies doivent être originales (produites par l’étudiant ou un membre de l’équipe)
 - Toute copie de code, de portion de code, d’algorithme ou de texte doit faire mention de sa source
 - L’emprunt ou la copie de code ou de portions de code est interdite
@@ -33,7 +33,7 @@
   - Variables et paramètres
   - L'ordre logique des images est indiqué par le tri des noms de fichier par ordre lexicographique ou les copies d'écran sont dans un fichier Word ou PDF
 - Fichier YAML (pipeline YAML) (15 points)
-- Liste des commandes de compilation, ajout de projets / package NuGet (10 points)
+- Liste des commandes de création, ajout de projets / dépendances (10 points)
 - Fichier contenant la répartition des tâches entre partenaires avec nombre d'heures (5 points)
 - Ajoutez `rparadis@csfoy.ca` comme utilisateur et administrateur avec une licence de type Basic (Le faire au niveau de l'organisation) (-10 points si je dois courir après vous)
 - Répondre aux questions suivantes (15 points):
@@ -51,7 +51,7 @@ En résumé, ce qui est noté est ce qui est dans l'archive zip sur Léa à l'ex
 
 ## Projet
 
-Le projet est un vieux projet développé en dotnet 3.1. Il se trouve dans le répertoire ```src``` du présent répertoire. Vous pouvez le passer en version plus récente pour les besoins de ce travail pratique.
+Le projet est un vieux projet développé en dotnet 3.1. Il se trouve dans le répertoire ```src``` du présent répertoire. Vous devrez très probablement le passer en version plus récente pour les besoins de ce travail pratique (je vous conseille dotnet 8.0 ou 9.0 pour faciltier l'intégration dans les pipelines).
 
 ## Étape 1 - Gestion de source et intégration continue
 
@@ -59,17 +59,17 @@ Vous devez mettre le projet sous contrôle de source et mettre en place des pipe
 
 - Vous devez créer un nouveau projet d'équipe et y ajouter le code du projet dans le dépôt par défaut dans la branche "main" (n'oubliez pas le .gitignore !)
 - Vous devez créer une branche "develop"
-- Vous devez créer un pipeline classic d'intégration continue qui construit 3 artefacts (donc 3 ".net publish" et non 1 comme dans les exercices) : un pour l'interface utilisateur (GC.ConsoleUI) et un par traitement lot (GC.Batch.ModifierNomPrenomPremiereLettreMajuscules et GC.Batch.ModifierPaysMajusculesClients)
+- Vous devez créer un pipeline classic d'intégration continue qui construit **3 artéfacts différents**, soit un par projet. Assurez-vous de bien nommer vos artéfacts. Pour la publication des projets, faites vos tâches de la façon suivante : une pour l'interface utilisateur (GC.ConsoleUI) et une par traitement lot (regroupement de tâches) (GC.Batch.ModifierNomPrenomPremiereLettreMajuscules et GC.Batch.ModifierPaysMajusculesClients)
 - Reproduire une nouvelle version de ce pipeline avec des fichiers de description YAML
 - Les pipelines doivent se déclencher automatiquement à chaque modification des branches "main" et "develop"
 
 ## Étape 2 - Préparation d'un projet web
 
-Une nouvelle équipe de développeur va être prochainement créée afin de moderniser l'interface utilisateur actuelle du projet : elle va réaliser une application web avec les technologies ASP.Net MVC et React. L'application sera proposée en mode authentifiée grâce à une authentification individuelle.
+Une nouvelle équipe de développeur va être prochainement créée afin de moderniser l'interface utilisateur actuelle du projet : elle va réaliser une application web avec les technologies ASP.Net Core et React. 
 
 Vous devez donc :
 
-- Créer une branche pour ajouter le nouveau projet web (Créé à partir de l'utilitaire dotnet en ligne de commandes - mettre les lignes utilisées dans la documentation)
+- Créer une branche pour ajouter le nouveau projet web (Créé à partir de l'utilitaire dotnet en ligne de commandes (cherchez comment créer un projet à partir d'un template) - mettre les lignes utilisées dans la documentation.)
 - Faire une pull-request pour l'intégrer dans la branche la plus logique
 - Modifier les pipelines afin d'ajouter un artefact pour l'application Web
 - Tester vos pipelines, ainsi que les artefacts de sortie
