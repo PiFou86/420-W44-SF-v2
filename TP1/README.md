@@ -33,7 +33,7 @@
   - Variables et paramètres
   - L'ordre logique des images est indiqué par le tri des noms de fichier par ordre lexicographique ou les copies d'écran sont dans un fichier Word ou PDF
 - Fichier YAML (pipeline YAML) (15 points)
-- Liste des commandes de création, ajout de projets / dépendances (10 points)
+- Liste des commandes de création, ajout de projets / dépendances. Ce fichier devrait finalement comporter toutes les commandes *dotnet* utilisées lors du travail. (10 points)
 - Fichier contenant la répartition des tâches entre partenaires avec nombre d'heures (5 points)
 - Ajoutez `rparadis@csfoy.ca` comme utilisateur et administrateur avec une licence de type Basic (Le faire au niveau de l'organisation) (-10 points si je dois courir après vous)
 - Répondre aux questions suivantes (15 points):
