@@ -44,8 +44,8 @@
   - Au niveau de la région, choisissez `Canada east`
   - Pour la redondance de stockage, choisissez `Stockage localement redondant` (LRS)
   - Ajoutez les étiquettes (tags) suivantes :
-    - `cohorte` : `<NumeroCohorte(ex:4394)>`
-    - `session` : `<Session(ex:H23)>`
+    - `cohorte` : `<NumeroCohorte(ex:4372)>`
+    - `session` : `<Session(ex:A25)>`
     - `cours` : `420-W44-SF`
     - `module` : `M04`
   - Créez la ressource
@@ -58,11 +58,11 @@
   - Si vous avez un Cloud Shell qui s'ouvre par défaut, il ne sera pas relié à la ressource que vous venez de créer. Pour y arriver, vous devrez supprimer (unmount) le stockage actuel avec la commande PowerShell (vous devrez probablement faire le « switch ») : `Dismount-CloudDrive`.
   - Après avoir confirmé, fermez votre Cloud Shell et ouvrez-en un nouveau.
   - Choisissez `Bash`
-  - Dans la fenêtre de création du Cloud Shell, sélectionnez `Monter un stockage existant`, puis sélectionnez (dans la fenêtre suivante)&nbsp;:
+  - Dans la fenêtre de création du Cloud Shell, sélectionnez `Monter un compte de stockage` et appliquez. Sélectionnez ensuite `Je veux créer un compte de stockage`, puis remplissez les différents champs (dans la fenêtre suivante):
     - Votre bonne région
-    - Votre groupe de ressources (`general-rg`)
+    - Créez un groupe de ressources : `general-rg`
     - Votre compte de stockage (`generaldfccsfoy<matricule>sa`)
-    - Créez un partage de fichier (`partagegeneral`)
+    - Créez un partage de fichier avec le nom : `partagegeneral`
   - Une fois le Cloud Shell ouvert, exécutez la commande `az account show`
   - Notez le nom de votre abonnement sur votre cahier de laboratoire et valider que c'est le même que celui de la tâche précédente
 - Allez dans le dossier `~/clouddrive`
