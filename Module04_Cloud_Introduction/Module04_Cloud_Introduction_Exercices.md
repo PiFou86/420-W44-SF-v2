@@ -123,7 +123,7 @@ Le but de cet exercice est de créer une VM Linux avec le port 80 ouvert. La pre
 - Créez une machine virtuelle à l'aide du menu `machine virtuelle` à partir du menu des services
 - Choisissez votre abonnement, le groupe de ressources et le nom `M04-Ex04-T01` pour votre machine virtuelle
 - Choisissez la région `Canada East` (Prenez `Canada centre` si non disponible)
-- !!!Choisissez la taille de la machine virtuelle "Standard B1ls" qui est la plus petite machine virtuelle Linux!!!
+- !!!Choisissez la taille de machine virtuelle disponible qui est la moins chère! Je vous conseille de trier par prix avec la colonne de prix/mois à droite complètement!!!
 - Choisissez une image Linux de type `Ubuntu Server 20.04 LTS` ou supérieure
 - Choisissez un nom d'utilisateur et un mot de passe
 - Autorisez le port 80 et le port 22
