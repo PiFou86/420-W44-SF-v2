@@ -154,7 +154,7 @@ Le but de cet exercice est de créer une VM Linux avec le port 80 ouvert. La pre
 - Créez un nouveau groupe de ressources. Utilisez la commande précédente pour créer un nouveau groupe de ressources nommé `M04-Ex04-T02`
 - Listez les images disponibles. Utilisez la commande `az vm image list` pour lister les images disponibles
 - Listez versions disponibles pour l'image Ubuntu en utilisant la commande `az vm image list-skus --publisher "Canonical" --offer "UbuntuServer" --location "canadaeast"`
-- Dans le résultat, recherchez la version `22_04-LTS` ou supérieure et notez les informations de l'image
+- Dans le résultat, recherchez la version `19_04` ou trouvez un équivalent disponible et notez les informations de l'image
 - Listez les tailles de VM disponibles. Utilisez la commande `az vm list-sizes --location canadaeast` pour lister les tailles de VM disponibles
 - Comme vous le voyez, il y a beaucoup de taille de VM. Pour cette tâche, nous allons utiliser la taille "Standard_B1ls" (il se peut qu'elle ne soit pas disponible, essayez d'en trouver une équivalente) qui est la plus petite taille de VM Linux
 - Créez la VM avec la commande `az vm create --resource-group "M04-Ex04-T02" --name "M04-Ex04-T02-VM" --image "Ubuntu2204" --size "Standard_B1ls" --admin-username "adminuser" --admin-password "Password123.." --public-ip-sku Basic --location "canadaeast" --tags "cohorte=<NumeroCohorte(ex:4394)>" "session=<Session(ex:H23)>" "cours=420-W44-SF" "module=M04"` (Si vous utilisez un autre groupe de ressources, n'oubliez pas de le changer dans la commande)
@@ -178,7 +178,7 @@ az group create --name M04-Ex04-T02 --location canadaeast --tags "cohorte=<Numer
 
 ### Tâche 3 - Création d'une VM Linux à partir d'un template ARM
 
-- Débutez la création de la VM Linux `M04-Ex04-T03-VM` à partir du portail Azure. Au lieu de créer la ressource, téléchargez le template ARM de la VM
+- Débutez la création de la VM Linux `M04-Ex04-T03-VM` à partir du portail Azure. Faites la création comme d'habitude mais, au lieu de créer la ressource depuis la section « Valider + Créer », téléchargez le template ARM de la VM (en bas à droite de la fenêtre un nouveau bouton devrait être apparu)
 - Positionnez-vous dans le répertoire de votre choix et désarchiver le fichier téléchargé
 - Modifiez le fichier `parameters.json` pour définir le mot de passe du compte administrateur (vers la fin du document JSON)
 - En ligne de commande, créez le groupe de ressources `M04-Ex04-T03`
