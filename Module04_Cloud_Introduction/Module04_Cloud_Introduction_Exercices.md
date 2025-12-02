@@ -212,7 +212,7 @@ Nous allons utiliser un niveau de calcul de type sans serveur (serverless) qui e
 
 - Créez une application web nommée `M04-Ex05-T01-Web-<matricule>` (Web App) dans le groupe de ressources `M04-Ex05-T01` :
   - Choisissez publier "Code"
-  - Pile d'exécution, choisissez ".NET 6 (LTS)"
+  - Pile d'exécution, choisissez ".NET 8 (LTS)"
   - Systeme d'exploitation, choisissez "Linux"
   - Région, choisissez "Canada Central"
   - Modifier plan de tarification, choisissez "Gratuit F1" (Dans Dev/Test)
