@@ -157,7 +157,7 @@ Le but de cet exercice est de créer une VM Linux avec le port 80 ouvert. La pre
 - Dans le résultat, recherchez la version `19_04` ou trouvez un équivalent disponible et notez les informations de l'image
 - Listez les tailles de VM disponibles. Utilisez la commande `az vm list-sizes --location canadaeast` pour lister les tailles de VM disponibles
 - Comme vous le voyez, il y a beaucoup de taille de VM. Pour cette tâche, nous allons utiliser la taille "Standard_B1ls" (il se peut qu'elle ne soit pas disponible, essayez d'en trouver une équivalente) qui est la plus petite taille de VM Linux
-- Créez la VM avec la commande `az vm create --resource-group "M04-Ex04-T02" --name "M04-Ex04-T02-VM" --image "Ubuntu2204" --size "Standard_B1ls" --admin-username "adminuser" --admin-password "Password123.." --public-ip-sku Basic --location "canadaeast" --tags "cohorte=<NumeroCohorte(ex:4394)>" "session=<Session(ex:H23)>" "cours=420-W44-SF" "module=M04"` (Si vous utilisez un autre groupe de ressources, n'oubliez pas de le changer dans la commande)
+- Créez la VM avec la commande `az vm create --resource-group "M04-Ex04-T02" --name "M04-Ex04-T02-VM" --image "Ubuntu2204" --size "Standard_B1ls" --admin-username "adminuser" --admin-password "Password123.." --public-ip-sku Standard --location "canadaeast" --tags "cohorte=<NumeroCohorte(ex:4394)>" "session=<Session(ex:H23)>" "cours=420-W44-SF" "module=M04"` (Si vous utilisez un autre groupe de ressources, n'oubliez pas de le changer dans la commande)
 - Listez les machines virtuelles pour vérifier que votre VM a bien été créée avec la commande `az vm list`
 - Installez Ngnix grâce à la commande suivante : `az vm run-command invoke --resource-group "M04-Ex04-T02" --name "M04-Ex04-T02-VM" --command-id RunShellScript --scripts "sudo apt -y update && sudo apt -y upgrade && sudo apt -y install nginx"`
 - Ouvrez le port 80 avec la commande suivante : `az vm open-port --resource-group "M04-Ex04-T02" --name "M04-Ex04-T02-VM" --port 80` si cela ne fonctionne pas allez dans le portail Azure et validez la configuration
@@ -212,11 +212,11 @@ Nous allons utiliser un niveau de calcul de type sans serveur (serverless) qui e
 
 - Créez une application web nommée `M04-Ex05-T01-Web-<matricule>` (Web App) dans le groupe de ressources `M04-Ex05-T01` :
   - Choisissez publier "Code"
-  - Pile d'exécution, choisissez ".NET 6 (LTS)"
+  - Pile d'exécution, choisissez ".NET 8 (LTS)"
   - Systeme d'exploitation, choisissez "Linux"
   - Région, choisissez "Canada Central"
   - Modifier plan de tarification, choisissez "Gratuit F1" (Dans Dev/Test)
-  - Dans la section "Application Insights", choisissez "Désactiver" (Surveillance)
+  - Dans la section "Application Insights" (Onglet Superviser + Sécuriser), choisissez "Désactiver"
   - Dans la section balises, ajoutez les balises suivantes :
     - cohorte=<NumeroCohorte(ex:4394)>
     - session=<Session(ex:H23)>
@@ -241,7 +241,7 @@ Nous allons utiliser un niveau de calcul de type sans serveur (serverless) qui e
 ### Tâche 2 - Création d'une application web à partir de la ligne de commande
 
 - Créez un plan de service nommé "M04-Ex06-T02-AppServicePlan" dans le groupe de ressources "M04-Ex06-T01" à partir de la ligne de commande suivante : `az appservice plan create --name "M04-Ex06-T02-AppServicePlan" --resource-group "M04-Ex06-T01" --location "canadacentral" --sku "F1" --is-linux --tags "cohorte=<NumeroCohorte(ex:4394)>" "session=<Session(ex:H23)>" "cours=420-W44-SF" "module=M04"`
-- Créez une application web nommée "M04-Ex06-T02-Web-<matricule>" (App web) dans le groupe de ressources "M04-Ex06-T01" et le plan de service nommé "M04-Ex06-T02-AppServicePlan" à partir de la ligne de commande suivante : `az webapp create --resource-group "M04-Ex06-T01" --plan "M04-Ex06-T02-AppServicePlan" --name "M04-Ex06-T02-Web-<matricule>" --runtime "DOTNETCORE:6.0" --tags "cohorte=<NumeroCohorte(ex:4394)>" "session=<Session(ex:H23)>" "cours=420-W44-SF" "module=M04"`
+- Créez une application web nommée "M04-Ex06-T02-Web-<matricule>" (App web) dans le groupe de ressources "M04-Ex06-T01" et le plan de service nommé "M04-Ex06-T02-AppServicePlan" à partir de la ligne de commande suivante : `az webapp create --resource-group "M04-Ex06-T01" --plan "M04-Ex06-T02-AppServicePlan" --name "M04-Ex06-T02-Web-<matricule>" --runtime "DOTNETCORE:8.0" --tags "cohorte=<NumeroCohorte(ex:4394)>" "session=<Session(ex:H23)>" "cours=420-W44-SF" "module=M04"`
 - Notez la valeur de la clef "defaultHostName" dans la sortie de la commande précédente. Vous aurez besoin de cette valeur pour essayer votre application web.
 - Testez votre application web
 - Construisez, dans une variable locale, votre chaine de connexion pour la base de données à partir de la chaine suivante :
