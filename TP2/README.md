@@ -2,7 +2,7 @@
 
 ## Informations
 
-- Remise du travail: mercredi 4 juin 2025, 23:59
+- Remise du travail: dimanche 18 janvier 2026, 23:59
 - Ce travail est réalisé en équipe de 2 personnes et seuls les membres de cette équipe y contribuent
 - Toutes les réponses fournies doivent être originales (produites par l’étudiant ou un membre de l’équipe)
 - Toute copie de code, de portion de code, d’algorithme ou de texte doit faire mention de sa source
@@ -16,8 +16,8 @@
 
 - Montrer que vous avez compris la création d'artefacts (CI)
 - Montrer que vous avez compris la création de ressources sur Azure par l’infrastructure as code (IaC)
-- Montrer que vous avez compris le principe de déploiement continue et son intégration dans le cycle DevOps
-- Créer deux pipelines de déploiement continue dans Azure DevOps
+- Montrer que vous avez compris le principe de déploiement continu et son intégration dans le cycle DevOps
+- Créer deux pipelines de déploiement continu dans Azure DevOps
 - Créer trois environnements de déploiement dans Azure
 - Être capable d'expliquer la partie théorique et technique
 
@@ -44,11 +44,12 @@
   - Vos informations (prénom / nom / matricule)
   - le fichier doit être remis dans l'archive zip sur Léa
 
+Vos fichiers et réponses peuvent être remis dans le format désiré (PDF, Word, txt, md, plusieurs fichiers différents, etc.), tant que tout est facilement accessible, compréhensible et bien identifié. Tout ce qui est évalué (ce qui est mentionné ci-haut) devrait se retrouver dans une archive zip dans le format que vous désirez ou selon les spécifications de l'énoncé.
 En résumé, ce qui est noté est ce qui est dans l'archive zip sur Léa à l'exception de la vidéo sur YouTube dont je dois trouver le lien dans le fichier `AUTHORS.md`.
 
 ## Projet
 
-Le projet est écrit en .Net 6.0. Il se trouve dans le répertoire ```src``` du présent répertoire.
+Le projet est écrit en .Net 8.0. Il se trouve dans le répertoire ```src``` du présent répertoire.
 
 ## Étape 1 - Gestion de source et intégration continue
 
@@ -56,7 +57,7 @@ Vous devez mettre le projet sous contrôle de source et mettre en place des pipe
 
 - Vous devez créer un nouveau projet d'équipe et y ajouter le code du projet dans le dépôt par défaut dans la branche "main" (n'oubliez pas le .gitignore !)
 - Vous devez créer une branche "develop"
-- Vous devez créer un pipeline classic ou YAML d'intégration continue qui construit 4 artefacts (donc 4 "dotnet publish" et non 1 comme dans les exercices) : un pour l'interface utilisateur (GC.ConsoleUI), un par traitement lot (GC.Batch.ModifierNomPrenomPremiereLettreMajuscules et GC.Batch.ModifierPaysMajusculesClients) et un pour le projet Web (GC.WebReact)
+- Vous devez créer un pipeline classic ou YAML d'intégration continue qui construit **4 artéfacts différents**, soit un par projet. Assurez-vous de bien nommer vos artéfacts. Vous aurez donc les artéfacts suivants : un pour l'interface utilisateur (GC.ConsoleUI), un pour GC.Batch.ModifierNomPrenomPremiereLettreMajuscules, un pour GC.Batch.ModifierPaysMajusculesClients et un dernier pour le projet Web (GC.WebReact)
 - Le pipeline doit se déclencher automatiquement à chaque modification des branches "main" et "develop"
 
 ## Étape 2 - Création des ressources Azure
@@ -77,9 +78,9 @@ Vous devez créer deux pipelines de déploiement continu qui va déployer l'appl
 
 Chaque pipeline de déploiement doit :
 
-- Modifier le fichier appsettings.json pour y mettre les bonnes valeurs de connexion à la base de données (`DefaultConnection`) et de l'URL du service d'identité (`IssuerUri`)
-- Déployer les ressources Azure (artefacts du pipeline de l'étape 2)
-- Déployer l'application Web (artefacts du pipeline de l'étape 1)
+- Modifier le fichier appsettings.json pour y mettre les bonnes valeurs de connexion à la base de données (`DefaultConnection`) et de l'URL du service d'identité (`IssuerUri`) (vous devriez être capables de vous fier à d'autres exemples pour déduire ces informations)
+- Déployer les ressources Azure (artéfacts du pipeline de l'étape 2)
+- Déployer l'application Web (artéfacts du pipeline de l'étape 1)
 
 Le premier pipeline doit déployer dans l'environnement de développement et le second dans l'environnement de production.
 
