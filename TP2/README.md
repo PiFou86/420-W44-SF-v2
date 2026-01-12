@@ -105,7 +105,7 @@ Vous pouvez effectuer une requête GET sur l'URL suivante :
 
 Si vous avez de la difficulté avec Entity Framework : 
 
-- Vous pouvez essayer d'installer une version spécifique du framework selon la version de votre projet (.NET 8 normalement) : `install --global dotnet-ef --version 8.*`
+- Vous pouvez essayer d'installer une version spécifique du framework selon la version de votre projet (.NET 8 normalement) : `install --global dotnet-ef --version 8.*` (merci à Antoine Masson pour la modification)
 
 Si vous avez des erreurs au moment du déploiement, vous pouvez :
 
