@@ -58,7 +58,7 @@ Dans cet exercice, nous allons créer des déploiements quelconques dont nous al
       - env : accept
   - Faites des requêtes à partir de kubectl afin d'afficher :
     - tous les pods du tier backend appartenant à l'environnement fonc
-    - tous les pods du tier frontend appartenant n'appartenant pas à l'environnement fonc
+    - tous les pods du tier frontend n'appartenant pas à l'environnement fonc
     - tous les pods du tier backend appartenant aux environnements (fonc, unit)
     - tous les pods du tier backend
     - tous les pods de l'environnement unit
