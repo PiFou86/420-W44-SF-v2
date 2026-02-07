@@ -2,14 +2,14 @@
 
 ## Informations
 
-- Remise du travail: mercredi 16 juillet 2025, 23:59
+- Remise du travail: mercredi 24 février 2026, 23:59
 - Ce travail est réalisé en équipe de 2 (ou 3 max) personnes et seuls les membres de cette équipe y contribuent
 - Toutes les réponses fournies doivent être originales (produites par l’étudiant ou un membre de l’équipe)
 - Toute copie de code, de portion de code, d’algorithme ou de texte doit faire mention de sa source
 - L’emprunt ou la copie de code ou de portions de code est interdite
 - Tout constat de plagiat, tricherie ou fraude sera automatiquement déclaré à la Direction et les sanctions prévues seront appliquées
 - Durée : 4 x 3 heures + travail à la maison
-- Plate forme : Docker, Kubernetes, Visual Studio Code et dotnet/react
+- Plateformes : Docker, Kubernetes, Visual Studio Code et dotnet/react
 - Pas d'utilisation de Visual Studio (vous êtes des DevOps et l'entreprise ne paie pas de licence pour cela) : vous devez tout faire en ligne de commande
 
 ## Objectifs
@@ -37,11 +37,12 @@
   - Vos informations (prénom / nom / matricule)
   - le fichier doit être remis dans l'archive zip sur Léa
 
+Vos fichiers et réponses peuvent être remis dans le format désiré (PDF, Word, txt, md, plusieurs fichiers différents, etc.), tant que tout est facilement accessible, compréhensible et bien identifié. Tout ce qui est évalué (ce qui est mentionné ci-haut) devrait se retrouver dans une archive zip dans le format que vous désirez ou selon les spécifications de l'énoncé.
 En résumé, ce qui est noté est ce qui est dans l'archive zip sur Léa à l'exception de la vidéo sur YouTube dont je dois trouver le lien dans le fichier `AUTHORS.md`.
 
 ## Projet
 
-Le projet est écrit en .Net 6.0. Il se trouve dans le répertoire ```src``` du présent répertoire.
+Le projet est écrit en .Net 8.0. Vous devriez trouver une version fonctionnel ici : [Projet de départ](https://github.com/rparadiscsfoy/srcProjetITV) Une ancienne version en .Net 6.0 se trouve dans le répertoire ```src``` du présent répertoire.
 
 Pour modifier la configuration de la chaîne de connexion et écraser les valeurs du fichier `appsettings.json`, vous pouvez utiliser les variables d'environnement. Par exemple, pour modifier la valeur de `ConnectionStrings.DefaultConnection` dans le fichier `appsettings.json`, vous pouvez utiliser la variable d'environnement `ConnectionStrings__DefaultConnection` : le point est remplacé par deux underscores.
 
@@ -85,5 +86,4 @@ Tout partage de code, d'explication, de bouts de texte, etc. est considéré com
 ## Bonus
 
 - Un seul ensemble de fichiers YAML pour tous les environnements (modèle de déploiement avec remplacement de noms automatiquement - i.e. script de transformation) 5%
-- Validation de la santé des conteneurs 5%
-- Image de moins de 90 Mo 5%
+- Image déployée de moins de 90 Mo (montrez le dans la vidéo si c'est le cas) 5%
