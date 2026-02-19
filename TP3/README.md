@@ -42,7 +42,7 @@ En résumé, ce qui est noté est ce qui est dans l'archive zip sur Léa à l'ex
 
 ## Projet
 
-Le projet est écrit en .Net 8.0. Vous devriez trouver une version fonctionnel ici : [Projet de départ](https://github.com/rparadiscsfoy/srcProjetITV) Une ancienne version en .Net 6.0 se trouve dans le répertoire ```src``` du présent répertoire.
+Le projet est écrit en .Net 8.0. Vous devriez trouver une version fonctionnel ici : [Projet de départ](https://github.com/rparadiscsfoy/srcTP3ProjetITV) Une ancienne version en .Net 6.0 se trouve dans le répertoire ```src``` du présent répertoire.
 
 Pour modifier la configuration de la chaîne de connexion et écraser les valeurs du fichier `appsettings.json`, vous pouvez utiliser les variables d'environnement. Par exemple, pour modifier la valeur de `ConnectionStrings.DefaultConnection` dans le fichier `appsettings.json`, vous pouvez utiliser la variable d'environnement `ConnectionStrings__DefaultConnection` : le point est remplacé par deux underscores.
 
