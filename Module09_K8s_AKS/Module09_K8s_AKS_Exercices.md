@@ -19,7 +19,7 @@ Pour créer votre premier cluster AKS, vous pouvez passer par le portail Azure.
   - AKS pricing tier : choisissez `Free`
   - Automatic upgrade : choisissez `Disabled`
 - Les trois options suivantes se trouveront dans votre `Node Pool` par défaut : 
-  - Taille de noeud : choisissez `DS2_v2` !! N'oubliez pas de supprimer vos ressources lorsque vous avez fini pour éviter des coûts !!
+  - Taille de noeud : choisissez `DS2_v2` ou la plus petite taille disponible dans votre région !! N'oubliez pas de supprimer vos ressources lorsque vous avez fini pour éviter des coûts !!
   - Méthode de mise à l'échelle : choisissez `Manuelle`
   - Nombre de noeuds : choisissez `1`
   - Dans l'onglet `Pools de noeuds`, validez que la somme des nombres de noeuds est égale à `1`
