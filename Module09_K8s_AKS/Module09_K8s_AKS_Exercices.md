@@ -23,7 +23,7 @@ Pour créer votre premier cluster AKS, vous pouvez passer par le portail Azure.
   - Méthode de mise à l'échelle : choisissez `Manuelle`
   - Nombre de noeuds : choisissez `1`
   - Dans l'onglet `Pools de noeuds`, validez que la somme des nombres de noeuds est égale à `1`
-  - Dans l'onglet `Mise en réseau`, choisissez `Kubernetes`
+  - Dans l'onglet `Mise en réseau`, choisissez `Kubernetes`. ATTENTION : la partie réseau sur Azure change toujours. Il se peut que les options suivantes ne soient plus disponible, alors levez votre main et nous trouverons une solution ensemble.
   - Cochez la case `Activer le routage d'application HTTP`
 - Validez la création du cluster AKS
 - Deux groupes de ressources devraient apparaitre :
